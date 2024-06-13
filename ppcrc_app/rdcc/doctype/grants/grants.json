@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{employee_id}-{instructor}-{####}",
+ "creation": "2024-06-08 08:52:52.312224",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "profile_tab",
+  "section_break_wdor",
+  "grant",
+  "date",
+  "instructor",
+  "co_principal_inventors",
+  "column_break_dfns",
+  "academic_year",
+  "fiscal_year",
+  "employee_id",
+  "program",
+  "amended_from",
+  "grants_approver_hod",
+  "grants_approver_po",
+  "details_tab",
+  "name_of_the_principal_investigator",
+  "name_of_project",
+  "amount_sanctioned",
+  "name_of_the_funding_agency",
+  "status",
+  "column_break_yrhj",
+  "department_of_principal_investigator",
+  "date_of_award",
+  "duration_of_the_project",
+  "research_type",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wdor",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Grants",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "profile_tab",
+   "fieldtype": "Tab Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "Instructor"
+  },
+  {
+   "fetch_from": "instructor.employee",
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dfns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "instructor.custom_program",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program",
+   "read_only": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Fiscal Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "co_principal_inventors",
+   "fieldtype": "Table",
+   "label": "Co-Principal Inventor's",
+   "options": "Coauthors"
+  },
+  {
+   "fetch_from": "instructor.instructor_name",
+   "fieldname": "name_of_the_principal_investigator",
+   "fieldtype": "Data",
+   "label": "Name of the Principal Investigator",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yrhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "instructor.custom_program",
+   "fieldname": "department_of_principal_investigator",
+   "fieldtype": "Link",
+   "label": "Department of Principal Investigator",
+   "options": "Program",
+   "read_only": 1
+  },
+  {
+   "fieldname": "name_of_project",
+   "fieldtype": "Data",
+   "label": "Name of project"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_sanctioned",
+   "fieldtype": "Currency",
+   "label": "Amount Sanctioned",
+   "options": "Company:company:default_currency",
+   "precision": "2"
+  },
+  {
+   "fieldname": "duration_of_the_project",
+   "fieldtype": "Data",
+   "label": "Duration of the project"
+  },
+  {
+   "fieldname": "research_type",
+   "fieldtype": "Select",
+   "label": "Research Type",
+   "options": "\nNon-Government\nGovernment"
+  },
+  {
+   "fieldname": "name_of_the_funding_agency",
+   "fieldtype": "Data",
+   "label": "Name of the Funding Agency"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "grant",
+   "fieldtype": "Link",
+   "label": "Grant",
+   "options": "Grants Type"
+  },
+  {
+   "fieldname": "date_of_award",
+   "fieldtype": "Date",
+   "label": "Date of Award"
+  },
+  {
+   "fetch_from": "program.custom_head_of_department_user_id",
+   "fieldname": "grants_approver_hod",
+   "fieldtype": "Link",
+   "label": "Grants Approver (HoD)",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.custom_portfolio_coordinator_user_id",
+   "fieldname": "grants_approver_po",
+   "fieldtype": "Link",
+   "label": "Grants Approver (PO)",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-12 10:24:26.497515",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "Grants",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Instructor",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

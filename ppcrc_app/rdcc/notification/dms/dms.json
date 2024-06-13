@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-06-12 15:20:19.166387",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "DMS",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Add your message here</p>\n",
+ "message_type": "Markdown",
+ "modified": "2024-06-12 15:20:38.118169",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "dms",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "condition": "doc.status ==\"Pending\"",
+   "receiver_by_document_field": "approving_authority_id"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Dms",
+ "value_changed": "status"
+}

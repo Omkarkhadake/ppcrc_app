@@ -1,0 +1,308 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:document_name",
+ "creation": "2024-06-12 11:49:58.265542",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_tab",
+  "entity_name",
+  "fiscal_year",
+  "employee",
+  "designation",
+  "column_break_ohiv",
+  "document_creation_date",
+  "employee_name",
+  "email_id",
+  "document_details_tab",
+  "government_bodies_and_regulators",
+  "approving_authority_id",
+  "document_name",
+  "document_date",
+  "document_version",
+  "custodian_email",
+  "document_access_profile",
+  "document_status",
+  "document_start_date",
+  "website_reference",
+  "status",
+  "column_break_cdlm",
+  "document_categories",
+  "document_sub_categories",
+  "document_number",
+  "application_number",
+  "custodian_of_original_document",
+  "document_format",
+  "document_types",
+  "document_source",
+  "document_end_date",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DMS",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "document_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Document Details"
+  },
+  {
+   "fieldname": "employee_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Employee Details"
+  },
+  {
+   "fieldname": "entity_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Entity Name",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_creation_date",
+   "fieldtype": "Date",
+   "label": "Document Creation Date"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "government_bodies_and_regulators",
+   "fieldtype": "Link",
+   "label": "Government Bodies and Regulators",
+   "options": "Government bodies and Regulators",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cdlm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_categories",
+   "fieldtype": "Link",
+   "label": "Document Categories",
+   "options": "Document Categories",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "document_categories.approving_authority_user_id",
+   "fieldname": "approving_authority_id",
+   "fieldtype": "Link",
+   "label": "Approving Authority For Document Upload",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_sub_categories",
+   "fieldtype": "Link",
+   "label": "Document Sub-Categories",
+   "options": "Document Sub-Categories",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Link",
+   "label": "Document Name",
+   "options": "Document Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "document_number",
+   "fieldtype": "Data",
+   "label": "Document Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_date",
+   "fieldtype": "Date",
+   "label": "Document Date"
+  },
+  {
+   "fieldname": "application_number",
+   "fieldtype": "Data",
+   "label": "Application Number"
+  },
+  {
+   "fieldname": "document_version",
+   "fieldtype": "Link",
+   "label": "Document Version",
+   "options": "Document Version",
+   "reqd": 1
+  },
+  {
+   "fieldname": "custodian_of_original_document",
+   "fieldtype": "Link",
+   "label": "Custodian of Original Document",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "custodian_of_original_document.user_id",
+   "fieldname": "custodian_email",
+   "fieldtype": "Data",
+   "label": "Custodian Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_format",
+   "fieldtype": "Select",
+   "label": "Document Format",
+   "options": "\nPdf\nExcel\nCSV\nDoc\nImage"
+  },
+  {
+   "fieldname": "document_access_profile",
+   "fieldtype": "Select",
+   "label": "Document Access Profile",
+   "options": "\nConfidential\nPublic\nPrivate\nGeneral"
+  },
+  {
+   "fieldname": "document_types",
+   "fieldtype": "Link",
+   "label": "Document Types",
+   "options": "Document Types"
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Select",
+   "label": "Document Status",
+   "options": "\nDraft\nProvisional\nFinal"
+  },
+  {
+   "fieldname": "document_source",
+   "fieldtype": "Link",
+   "label": "Document Source",
+   "options": "Document Source"
+  },
+  {
+   "fieldname": "document_start_date",
+   "fieldtype": "Date",
+   "label": "Document Validity Date(From)(dd-mm-yyyy)"
+  },
+  {
+   "fieldname": "document_end_date",
+   "fieldtype": "Date",
+   "label": "Document Validity Date(To)(dd-mm-yyyy)"
+  },
+  {
+   "fieldname": "website_reference",
+   "fieldtype": "Link",
+   "label": "Website Reference",
+   "options": "Website Reference"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Data",
+   "label": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ohiv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email-id",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-12 15:17:26.178856",
+ "modified_by": "Administrator",
+ "module": "Document Management",
+ "name": "DMS",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

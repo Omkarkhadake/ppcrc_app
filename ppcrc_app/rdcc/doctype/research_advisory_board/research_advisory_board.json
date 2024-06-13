@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_member_of_research_advisory_board",
+ "creation": "2024-06-11 14:23:08.096046",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_member_of_research_advisory_board",
+  "internal_external",
+  "official_address",
+  "mobile_number",
+  "column_break_uhra",
+  "designation",
+  "organization",
+  "email",
+  "letter_of_acceptance"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_member_of_research_advisory_board",
+   "fieldtype": "Data",
+   "label": "Name of Member of Research Advisory Board",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_uhra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Select",
+   "label": "Designation",
+   "options": "\nMember\nChairperson"
+  },
+  {
+   "fieldname": "internal_external",
+   "fieldtype": "Select",
+   "label": "Internal/ External",
+   "options": "\nInternal\nExternal"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization"
+  },
+  {
+   "fieldname": "official_address",
+   "fieldtype": "Data",
+   "label": "Official Address "
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "E-Mail"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "letter_of_acceptance",
+   "fieldtype": "Select",
+   "label": "Letter of Acceptance",
+   "options": "\nYes\nNo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-11 14:33:27.499625",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "Research Advisory Board",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Pricipal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Department",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

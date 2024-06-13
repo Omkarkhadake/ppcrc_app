@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:categories",
+ "creation": "2024-06-12 12:03:27.352388",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "categories",
+  "approving_authority",
+  "approving_authority_user_id",
+  "approving_authority_name",
+  "subcategory"
+ ],
+ "fields": [
+  {
+   "fieldname": "categories",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Categories",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "approving_authority",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Approving Authority",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "approving_authority.user_id",
+   "fieldname": "approving_authority_user_id",
+   "fieldtype": "Data",
+   "label": "Approving Authority User Id",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "approving_authority.employee_name",
+   "fieldname": "approving_authority_name",
+   "fieldtype": "Data",
+   "label": "Approving Authority Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "subcategory",
+   "fieldtype": "Table",
+   "label": "sub-category",
+   "options": "test"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-13 09:52:55.422668",
+ "modified_by": "Administrator",
+ "module": "Document Management",
+ "name": "Document Categories",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

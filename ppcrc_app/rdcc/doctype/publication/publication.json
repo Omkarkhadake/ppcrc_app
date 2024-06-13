@@ -1,0 +1,312 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{employee_id}-{instructor}-{####}",
+ "creation": "2024-06-06 18:21:08.837778",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee_details_tab",
+  "publication_section",
+  "publication",
+  "academic_year",
+  "instructor",
+  "employee_id",
+  "program",
+  "title",
+  "publication_approver_hod",
+  "column_break_fhuh",
+  "name_of_journal",
+  "name_of_the_conference",
+  "financial_year",
+  "date_of_publication",
+  "place_of_publication",
+  "co_authors",
+  "publication_approver_po",
+  "amended_from",
+  "column_break_myoj",
+  "national_international",
+  "affiliation",
+  "publisher",
+  "is_ugc_care_listed_",
+  "proof",
+  "tab_break_bhmi",
+  "section_break_vnqq",
+  "page_numbers",
+  "citation",
+  "volume",
+  "status",
+  "column_break_moea",
+  "impact_factor",
+  "iisn_isbn",
+  "linkdoi",
+  "indexed",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "publication_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "publication",
+   "fieldtype": "Link",
+   "label": "Publication",
+   "options": "Publication Type"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "column_break_fhuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Name of the Author",
+   "options": "Instructor",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "instructor.employee",
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee Id",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "instructor.custom_program",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Program",
+   "options": "Program",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.publication== 'Journal';",
+   "fieldname": "name_of_journal",
+   "fieldtype": "Data",
+   "label": "Name of Journal",
+   "mandatory_depends_on": "eval:doc.publication== 'Journal';"
+  },
+  {
+   "fieldname": "iisn_isbn",
+   "fieldtype": "Data",
+   "label": "ISSN/ISBN (e.g.,\"xxxx-xxxx\")"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title of Paper"
+  },
+  {
+   "fieldname": "indexed",
+   "fieldtype": "Data",
+   "label": "Indexed in SCI/Scopus/Web of Science/IEEE, Google Scholar etc."
+  },
+  {
+   "fieldname": "impact_factor",
+   "fieldtype": "Data",
+   "label": "Impact Factor (e.g.,\"xx-xx\")"
+  },
+  {
+   "fieldname": "citation",
+   "fieldtype": "Data",
+   "label": "Citation (e.g.,\"xx\")"
+  },
+  {
+   "fieldname": "page_numbers",
+   "fieldtype": "Data",
+   "label": "Page Number(e.g.,\"xx-xx\")"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nRejected\nCancelled",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.publication == 'Conference';",
+   "fieldname": "name_of_the_conference",
+   "fieldtype": "Data",
+   "label": "Name of the conference"
+  },
+  {
+   "fieldname": "financial_year",
+   "fieldtype": "Link",
+   "label": "Financial Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "national_international",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nNational\nInternational"
+  },
+  {
+   "fieldname": "place_of_publication",
+   "fieldtype": "Data",
+   "label": "Place of Publication"
+  },
+  {
+   "fieldname": "date_of_publication",
+   "fieldtype": "Date",
+   "label": "Date of Publication"
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "linkdoi",
+   "fieldtype": "Data",
+   "label": "Link/DOI"
+  },
+  {
+   "fieldname": "affiliation",
+   "fieldtype": "Data",
+   "label": "Affiliation"
+  },
+  {
+   "fieldname": "is_ugc_care_listed_",
+   "fieldtype": "Select",
+   "label": "Is UGC Care Listed ?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "description": "(upload image to verify UGC Care List)",
+   "documentation_url": "https://www.ilovepdf.com/compress_pdf",
+   "fieldname": "proof",
+   "fieldtype": "Attach",
+   "label": "Proof "
+  },
+  {
+   "description": " (Attach Entire Document)",
+   "documentation_url": "https://www.ilovepdf.com/compress_pdf",
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Publication",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "co_authors",
+   "fieldtype": "Table",
+   "label": "Co-authors",
+   "options": "Coauthors",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_vnqq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_moea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tab_break_bhmi",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "employee_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Overview"
+  },
+  {
+   "fieldname": "column_break_myoj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "volume",
+   "fieldtype": "Data",
+   "label": "Volume(e.g.,\"xx\")"
+  },
+  {
+   "fetch_from": "program.custom_head_of_department_user_id",
+   "fieldname": "publication_approver_hod",
+   "fieldtype": "Link",
+   "label": "Publication Approver (HoD)",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.custom_portfolio_coordinator_user_id",
+   "fieldname": "publication_approver_po",
+   "fieldtype": "Link",
+   "label": "Publication Approver (PO)",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-12 10:00:25.512486",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "Publication",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Instructor",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,268 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{employee_id}-{instructors}-{####}",
+ "creation": "2024-06-07 11:00:50.155723",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "profile_tab",
+  "section_break_vy3a",
+  "ipr",
+  "academic_year",
+  "field_date",
+  "instructors",
+  "employee_id",
+  "program",
+  "ipr_approver_hod",
+  "column_break_pcpn",
+  "affiliation",
+  "finacial_year",
+  "amended_from",
+  "co_inventors",
+  "ipr_approver_po",
+  "deatils_tab",
+  "section_break_ojxh",
+  "title",
+  "application_no",
+  "published_date_or_granted_date",
+  "status",
+  "column_break_fjgj",
+  "publication_number_or_granted_number",
+  "registration_no",
+  "status_of_ipr",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vy3a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "IPR",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "ipr",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "IPR",
+   "options": "IPR Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "finacial_year",
+   "fieldtype": "Link",
+   "label": "Finacial Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "field_date",
+   "fieldtype": "Date",
+   "label": "Field Date"
+  },
+  {
+   "fieldname": "instructors",
+   "fieldtype": "Link",
+   "label": "Inventor/s Name",
+   "options": "Instructor"
+  },
+  {
+   "fieldname": "column_break_pcpn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "co_inventors",
+   "fieldtype": "Table",
+   "label": "Co-Inventor's",
+   "options": "Coauthors"
+  },
+  {
+   "fieldname": "registration_no",
+   "fieldtype": "Data",
+   "label": "Registration No."
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nPending\nApproved\nRejected\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Data",
+   "label": "Application No."
+  },
+  {
+   "fieldname": "affiliation",
+   "fieldtype": "Data",
+   "label": "Affiliation"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fetch_from": "instructors.employee",
+   "fieldname": "employee_id",
+   "fieldtype": "Data",
+   "label": "Employee Id",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "instructors.custom_program",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program",
+   "read_only": 1
+  },
+  {
+   "fieldname": "published_date_or_granted_date",
+   "fieldtype": "Date",
+   "label": "Published Date / Granted Date "
+  },
+  {
+   "fieldname": "publication_number_or_granted_number",
+   "fieldtype": "Data",
+   "label": "Publication Number / Granted Number"
+  },
+  {
+   "fieldname": "profile_tab",
+   "fieldtype": "Tab Break",
+   "label": "Profile"
+  },
+  {
+   "fieldname": "status_of_ipr",
+   "fieldtype": "Select",
+   "label": "Status of IPR",
+   "options": "\nGranted\nPublished"
+  },
+  {
+   "fieldname": "section_break_ojxh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_fjgj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deatils_tab",
+   "fieldtype": "Tab Break",
+   "label": "Detail"
+  },
+  {
+   "fetch_from": "program.custom_head_of_department_user_id",
+   "fieldname": "ipr_approver_hod",
+   "fieldtype": "Link",
+   "label": "IPR Approver (HoD)",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "program.custom_portfolio_coordinator_user_id",
+   "fieldname": "ipr_approver_po",
+   "fieldtype": "Link",
+   "label": "IPR Approver (PO)",
+   "options": "User",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-12 10:17:58.822631",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "IPR",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Instructor",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Department",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Portfolio Coordinator",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

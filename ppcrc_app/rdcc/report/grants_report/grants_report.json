@@ -1,0 +1,22 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-06-10 21:36:15.334111",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-06-10 21:36:15.334111",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "Grants Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Grants",
+ "report_name": "Grants Report",
+ "report_type": "Script Report",
+ "roles": []
+}
