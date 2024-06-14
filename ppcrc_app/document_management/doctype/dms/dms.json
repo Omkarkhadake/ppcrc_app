@@ -20,13 +20,13 @@
   "approving_authority_id",
   "document_name",
   "document_date",
-  "document_version",
   "custodian_email",
   "document_access_profile",
   "document_status",
   "document_start_date",
   "website_reference",
   "status",
+  "document_version_list",
   "column_break_cdlm",
   "document_categories",
   "document_sub_categories",
@@ -35,8 +35,8 @@
   "custodian_of_original_document",
   "document_format",
   "document_types",
-  "document_source",
   "document_end_date",
+  "document_source",
   "remarks",
   "amended_from"
  ],
@@ -95,12 +95,12 @@
   {
    "fieldname": "document_categories",
    "fieldtype": "Link",
-   "label": "Document Categories",
+   "label": "Categories",
    "options": "Document Categories",
    "reqd": 1
   },
   {
-   "fetch_from": "document_categories.approving_authority_user_id",
+   "fetch_from": "document_categories.approving_authority",
    "fieldname": "approving_authority_id",
    "fieldtype": "Link",
    "label": "Approving Authority For Document Upload",
@@ -110,14 +110,14 @@
   {
    "fieldname": "document_sub_categories",
    "fieldtype": "Link",
-   "label": "Document Sub-Categories",
+   "label": "Sub-Categories",
    "options": "Document Sub-Categories",
    "reqd": 1
   },
   {
    "fieldname": "document_name",
    "fieldtype": "Link",
-   "label": "Document Name",
+   "label": "Name",
    "options": "Document Name",
    "reqd": 1,
    "unique": 1
@@ -125,7 +125,7 @@
   {
    "fieldname": "document_number",
    "fieldtype": "Data",
-   "label": "Document Number",
+   "label": "Number",
    "reqd": 1
   },
   {
@@ -137,13 +137,6 @@
    "fieldname": "application_number",
    "fieldtype": "Data",
    "label": "Application Number"
-  },
-  {
-   "fieldname": "document_version",
-   "fieldtype": "Link",
-   "label": "Document Version",
-   "options": "Document Version",
-   "reqd": 1
   },
   {
    "fieldname": "custodian_of_original_document",
@@ -162,19 +155,19 @@
   {
    "fieldname": "document_format",
    "fieldtype": "Select",
-   "label": "Document Format",
+   "label": "Format",
    "options": "\nPdf\nExcel\nCSV\nDoc\nImage"
   },
   {
    "fieldname": "document_access_profile",
    "fieldtype": "Select",
-   "label": "Document Access Profile",
+   "label": "Access Profile",
    "options": "\nConfidential\nPublic\nPrivate\nGeneral"
   },
   {
    "fieldname": "document_types",
    "fieldtype": "Link",
-   "label": "Document Types",
+   "label": "Types",
    "options": "Document Types"
   },
   {
@@ -186,18 +179,18 @@
   {
    "fieldname": "document_source",
    "fieldtype": "Link",
-   "label": "Document Source",
+   "label": "Source",
    "options": "Document Source"
   },
   {
    "fieldname": "document_start_date",
    "fieldtype": "Date",
-   "label": "Document Validity Date(From)(dd-mm-yyyy)"
+   "label": "Start Date"
   },
   {
    "fieldname": "document_end_date",
    "fieldtype": "Date",
-   "label": "Document Validity Date(To)(dd-mm-yyyy)"
+   "label": "End Date"
   },
   {
    "fieldname": "website_reference",
@@ -246,12 +239,19 @@
    "fieldtype": "Data",
    "label": "Email-id",
    "read_only": 1
+  },
+  {
+   "columns": 3,
+   "fieldname": "document_version_list",
+   "fieldtype": "Table",
+   "label": "Document Version List",
+   "options": "Document Revision Child Table"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-12 15:17:26.178856",
+ "modified": "2024-06-14 12:24:07.758248",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "DMS",
@@ -259,6 +259,7 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,

@@ -1,0 +1,232 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:task_name",
+ "creation": "2024-06-13 11:52:57.961141",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_management_section",
+  "entity_name",
+  "regulating_authority",
+  "task_category",
+  "task_frequency",
+  "column_break_pzho",
+  "task_name",
+  "status",
+  "task_sub_category",
+  "priority",
+  "timeline_section",
+  "alert_notification_date",
+  "expected_start_date",
+  "column_break_dgyc",
+  "task_due_date",
+  "expected_end_date",
+  "details_section",
+  "task_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_management_section",
+   "fieldtype": "Section Break",
+   "label": "Task Management"
+  },
+  {
+   "fieldname": "entity_name",
+   "fieldtype": "Link",
+   "label": "Entity Name",
+   "options": "Company"
+  },
+  {
+   "fieldname": "regulating_authority",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Regulating Authority",
+   "options": "Regulating Authority",
+   "reqd": 1
+  },
+  {
+   "fieldname": "task_category",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Task Category",
+   "options": "Task Category"
+  },
+  {
+   "fieldname": "task_frequency",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Task Frequency",
+   "options": "\nOne-time\nYearly\nHalf-yearly\nQuarterly\nBi-monthly\nMonthly\nFortnightly\nWeekly\nDaily"
+  },
+  {
+   "fieldname": "column_break_pzho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "label": "Task Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "task_sub_category",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Task Sub-Category",
+   "options": "Task Sub-Category"
+  },
+  {
+   "fieldname": "timeline_section",
+   "fieldtype": "Section Break",
+   "label": "Timeline"
+  },
+  {
+   "default": "Today",
+   "fieldname": "alert_notification_date",
+   "fieldtype": "Date",
+   "label": "Alert Notification Date"
+  },
+  {
+   "fieldname": "column_break_dgyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "task_due_date",
+   "fieldtype": "Date",
+   "label": "Task Due Date"
+  },
+  {
+   "fieldname": "expected_start_date",
+   "fieldtype": "Date",
+   "label": "Expected Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Text Editor",
+   "label": "Task Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-14 09:26:42.181226",
+ "modified_by": "Administrator",
+ "module": "Task Management",
+ "name": "Task Management",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Department",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Instructor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

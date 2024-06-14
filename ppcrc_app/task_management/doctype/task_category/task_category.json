@@ -1,29 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:document_sub_category",
- "creation": "2024-06-14 13:56:36.497366",
+ "autoname": "field:task_category",
+ "creation": "2024-06-13 12:01:45.488447",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "document_sub_category"
+  "task_category"
  ],
  "fields": [
   {
-   "fieldname": "document_sub_category",
+   "fieldname": "task_category",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Document Sub-Category",
+   "label": "Task Category",
    "reqd": 1,
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-14 14:00:06.057911",
+ "modified": "2024-06-13 12:02:38.625081",
  "modified_by": "Administrator",
- "module": "Document Management",
- "name": "Document Sub-Categories",
+ "module": "Task Management",
+ "name": "Task Category",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -42,5 +42,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

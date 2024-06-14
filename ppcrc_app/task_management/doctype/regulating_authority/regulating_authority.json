@@ -1,29 +1,27 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:document_sub_category",
- "creation": "2024-06-14 13:56:36.497366",
+ "autoname": "field:regulating_authority",
+ "creation": "2024-06-13 12:00:17.278690",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "document_sub_category"
+  "regulating_authority"
  ],
  "fields": [
   {
-   "fieldname": "document_sub_category",
+   "fieldname": "regulating_authority",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Document Sub-Category",
-   "reqd": 1,
+   "label": "Regulating Authority",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-14 14:00:06.057911",
+ "modified": "2024-06-13 12:01:05.525870",
  "modified_by": "Administrator",
- "module": "Document Management",
- "name": "Document Sub-Categories",
+ "module": "Task Management",
+ "name": "Regulating Authority",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -42,5 +40,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }
