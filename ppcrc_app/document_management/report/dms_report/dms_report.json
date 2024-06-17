@@ -9,7 +9,7 @@
  "idx": 0,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-06-13 12:22:25.061088",
+ "modified": "2024-06-17 10:03:32.194781",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "DMS Report",
@@ -18,5 +18,15 @@
  "ref_doctype": "DMS",
  "report_name": "DMS Report",
  "report_type": "Script Report",
- "roles": []
+ "roles": [
+  {
+   "role": "Head of Trust"
+  },
+  {
+   "role": "Head of Trust Coordinator"
+  },
+  {
+   "role": "Trust office Coordinator"
+  }
+ ]
 }

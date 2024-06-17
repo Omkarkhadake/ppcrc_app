@@ -6,10 +6,10 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 0,
+ "idx": 1,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-06-10 21:36:15.334111",
+ "modified": "2024-06-17 10:03:52.830549",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Grants Report",
@@ -18,5 +18,30 @@
  "ref_doctype": "Grants",
  "report_name": "Grants Report",
  "report_type": "Script Report",
- "roles": []
+ "roles": [
+  {
+   "role": "Head of Department"
+  },
+  {
+   "role": "Head of Research and Development"
+  },
+  {
+   "role": "Head of Trust"
+  },
+  {
+   "role": "Head of Trust Coordinator"
+  },
+  {
+   "role": "Portfolio Coordinator"
+  },
+  {
+   "role": "Pricipal"
+  },
+  {
+   "role": "Institute Coordinator"
+  },
+  {
+   "role": "Trust office Coordinator"
+  }
+ ]
 }

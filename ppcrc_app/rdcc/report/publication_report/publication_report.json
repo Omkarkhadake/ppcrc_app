@@ -6,10 +6,10 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 0,
+ "idx": 3,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-06-10 17:22:37.041396",
+ "modified": "2024-06-17 10:03:46.426121",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Publication Report",
@@ -18,5 +18,30 @@
  "ref_doctype": "Publication",
  "report_name": "Publication Report",
  "report_type": "Script Report",
- "roles": []
+ "roles": [
+  {
+   "role": "Head of Department"
+  },
+  {
+   "role": "Portfolio Coordinator"
+  },
+  {
+   "role": "Head of Trust"
+  },
+  {
+   "role": "Head of Trust Coordinator"
+  },
+  {
+   "role": "Pricipal"
+  },
+  {
+   "role": "Institute Coordinator"
+  },
+  {
+   "role": "Head of Research and Development"
+  },
+  {
+   "role": "Trust office Coordinator"
+  }
+ ]
 }
