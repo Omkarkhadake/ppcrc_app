@@ -7,8 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "categories",
-  "approving_authority",
-  "list_of_subcategory"
+  "approving_authority"
  ],
  "fields": [
   {
@@ -26,18 +25,11 @@
    "label": "Approving Authority",
    "options": "User",
    "reqd": 1
-  },
-  {
-   "columns": 1,
-   "fieldname": "list_of_subcategory",
-   "fieldtype": "Table",
-   "label": "List of SubCategory",
-   "options": "Child Document Sub-Category"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-14 14:02:48.229253",
+ "modified": "2024-06-18 12:11:13.472596",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "Document Categories",

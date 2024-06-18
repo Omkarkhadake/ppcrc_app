@@ -19,6 +19,7 @@
   "timeline_section",
   "alert_notification_date",
   "expected_start_date",
+  "completed_on",
   "column_break_dgyc",
   "task_due_date",
   "expected_end_date",
@@ -147,11 +148,16 @@
    "fieldname": "task_description",
    "fieldtype": "Text Editor",
    "label": "Task Description"
+  },
+  {
+   "fieldname": "completed_on",
+   "fieldtype": "Date",
+   "label": "Completed On"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-14 09:26:42.181226",
+ "modified": "2024-06-18 11:49:35.552055",
  "modified_by": "Administrator",
  "module": "Task Management",
  "name": "Task Management",
