@@ -261,12 +261,10 @@
 
 
 
-
-
 frappe.ui.form.on("DMS", {
     onload: function(frm) {
         if (frm.is_new()) {
-            // Set date_of_movement to today's date
+            // Set the document creation date to today's date
             frm.set_value('document_creation_date', frappe.datetime.nowdate());
 
             // Fetch the user's email ID and employee ID
@@ -277,15 +275,16 @@ frappe.ui.form.on("DMS", {
                 },
                 callback: function(response) {
                     if (response.message) {
-                        console.log("Email ID: ", response.message.email);
-                        console.log("Employee ID: ", response.message.employee_id);
-                        console.log("Employee Name: ", response.message.employee_name);
-                        console.log("Employee designation: ", response.message.designation);
+                        const { email, employee_id, employee_name, designation } = response.message;
+                        console.log("Email ID:", email);
+                        console.log("Employee ID:", employee_id);
+                        console.log("Employee Name:", employee_name);
+                        console.log("Employee designation:", designation);
 
-                        frm.set_value('employee', response.message.employee_id);
-                        frm.set_value('email_id', response.message.email);
-                        frm.set_value('employee_name', response.message.employee_name);
-                        frm.set_value('designation', response.message.designation);
+                        frm.set_value('employee', employee_id);
+                        frm.set_value('email_id', email);
+                        frm.set_value('employee_name', employee_name);
+                        frm.set_value('designation', designation);
                     } else {
                         console.log("Email ID not found or error occurred.");
                     }
@@ -295,25 +294,14 @@ frappe.ui.form.on("DMS", {
                 }
             });
         }
-    },
-    refresh: function(frm) {
-        // Set query for document_sub_categories based on document_categories
-        frm.set_query('document_sub_categories', (doc) => {
-            return {
-                filters: {
-                    "document_categories": doc.document_categories
-                }
-            }
-        });
 
         // Disable delete button for 'document_version_list' table for non-System Managers
         if (!frappe.user.has_role('System Manager')) {
             frm.fields_dict['document_version_list'].grid.wrapper.find('.grid-remove-rows').hide();
         }
 
-        // Check if the user is the approving authority and the status is 'Pending'
+        // Add Approve and Reject buttons for approving authority if status is 'Pending'
         if (frm.doc.status === 'Pending' && frappe.session.user === frm.doc.approving_authority_id) {
-            // Add Approve and Reject buttons
             frm.add_custom_button(__('Approve'), function() {
                 frm.call('approve').then(() => {
                     frm.reload_doc();
@@ -329,10 +317,9 @@ frappe.ui.form.on("DMS", {
             }, __("Action"));
         }
 
-        // Show the "Request for this document" button only when document_status is Submitted and Approved
-        if (frm.doc.docstatus === 1 && frm.doc.status == "Approved") {
+        // Show "Request for this document" button only when document status is Submitted and Approved
+        if (frm.doc.docstatus === 1 && frm.doc.status === "Approved") {
             frm.add_custom_button(__("Request for this document"), function() {
-                // Get the ID of the current document
                 const documentId = frm.doc.name;
 
                 if (documentId) {
@@ -342,14 +329,16 @@ frappe.ui.form.on("DMS", {
                         args: { doc_id: documentId },
                         callback: function(response) {
                             if (response.message) {
+                                const { document_name, document_number, custodian_of_original_document, custodian_email } = response.message;
                                 console.log("Document Details:", response.message);
+
                                 // Create a new "Movement of Original Document" and set values
                                 frappe.model.with_doctype('Movement of Original Document', function() {
                                     var doc = frappe.model.get_new_doc('Movement of Original Document');
-                                    doc.document_name = response.message.document_name;
-                                    doc.document_number = response.message.document_number;
-                                    doc.default_custodian = response.message.custodian_of_original_document;
-                                    doc.default_custodian_email = response.message.custodian_email;
+                                    doc.document_name = document_name;
+                                    doc.document_number = document_number;
+                                    doc.default_custodian = custodian_of_original_document;
+                                    doc.default_custodian_email = custodian_email;
                                     // Set other fields as needed
                                     frappe.set_route("Form", "Movement of Original Document", doc.name);
                                 });
@@ -385,6 +374,7 @@ frappe.ui.form.on("DMS", {
             });
         }
     },
+
     on_submit: function(frm) {
         frm.set_value('status', 'Pending');
         frm.save_or_update();
