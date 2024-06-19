@@ -157,7 +157,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-18 11:49:35.552055",
+ "modified": "2024-06-18 21:15:28.562411",
  "modified_by": "Administrator",
  "module": "Task Management",
  "name": "Task Management",
@@ -234,5 +234,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

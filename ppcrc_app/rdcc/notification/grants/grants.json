@@ -10,9 +10,9 @@
  "event": "Value Change",
  "idx": 0,
  "is_standard": 1,
- "message": "Add your message here",
+ "message": "<p>Add your message here</p>\n",
  "message_type": "Markdown",
- "modified": "2024-06-12 10:27:24.747602",
+ "modified": "2024-06-19 10:45:35.641083",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Grants",
@@ -37,6 +37,8 @@
  ],
  "send_system_notification": 1,
  "send_to_all_assignees": 0,
+ "sender": "Info Ppcrc",
+ "sender_email": "info.ppcrc@isquareit.edu.in",
  "subject": "{{doc.grant}}-{{doc.employee_id}}-{{doc.instructor}}-{{doc.status}} Kindly Check",
  "value_changed": "status"
 }

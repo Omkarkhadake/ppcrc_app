@@ -158,15 +158,15 @@ def get_data(filters):
         order_by="creation",
     )
     for task in tasks:
-        if task.expected_end_date:
+        if task.task_due_date:
             if task.completed_on:
-                task.delay = date_diff(task.completed_on, task.expected_end_date)
+                task.delay = date_diff(task.completed_on, task.task_due_date)
             elif task.status == "Completed":
                 # task is completed but completed_on is not set (for older tasks)
                 task.delay = 0
             else:
                 # task not completed
-                task.delay = date_diff(nowdate(), task.expected_end_date)
+                task.delay = date_diff(nowdate(), task.task_due_date)
         else:
             # task has no end date, hence no delay
             task.delay = 0
@@ -190,22 +190,43 @@ def get_conditions(filters):
         conditions.expected_start_date = ["<=", filters.get("to_date")]
     return conditions
 
+# def get_chart_data(data):
+#     delay, on_track = 0, 0
+#     for entry in data:
+#         if entry.get("delay") > 0:
+#             delay = delay + 1
+#         else:
+#             on_track = on_track + 1
+#     charts = {
+#         "data": {
+#             "labels": [_("On Track"), _("Delayed")],
+#             "datasets": [{"name": "Task Status", "values": [on_track, delay]}],
+#         },
+#         "type": "percentage",
+#         "colors": ["#84D5BA", "#CB4B5F"],
+#     }
+#     return charts
+
 def get_chart_data(data):
-    delay, on_track = 0, 0
+    delay, on_track, overdue = 0, 0, 0
     for entry in data:
-        if entry.get("delay") > 0:
-            delay = delay + 1
+        if entry.get("completed_on") and entry.get("completed_on") > entry.get("expected_end_date"):
+            overdue += 1
+        elif entry.get("delay") > 0:
+            delay += 1
         else:
-            on_track = on_track + 1
+            on_track += 1
+    
     charts = {
         "data": {
-            "labels": [_("On Track"), _("Delayed")],
-            "datasets": [{"name": "Task Status", "values": [on_track, delay]}],
+            "labels": [_("On Track"), _("Delayed"), _("Overdue")],
+            "datasets": [{"name": "Task Status", "values": [on_track, delay, overdue]}],
         },
         "type": "percentage",
-        "colors": ["#84D5BA", "#CB4B5F"],
+        "colors": ["#84D5BA", "#CB4B5F", "#FFA500"],  # Added a new color for "Overdue"
     }
     return charts
+
 
 def get_columns():
     columns = [

@@ -10,9 +10,9 @@
  "event": "Value Change",
  "idx": 0,
  "is_standard": 1,
- "message": "Add your message here",
+ "message": "<p>Add your message here</p>\n",
  "message_type": "Markdown",
- "modified": "2024-06-12 10:25:02.947926",
+ "modified": "2024-06-19 10:43:26.150652",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "IPR",
@@ -37,6 +37,8 @@
  ],
  "send_system_notification": 1,
  "send_to_all_assignees": 0,
+ "sender": "Info Ppcrc",
+ "sender_email": "info.ppcrc@isquareit.edu.in",
  "subject": "{{doc.ipr}}-{{doc.employee_id}}-{{doc.instructors}}-{{doc.status}} Kindly Check",
  "value_changed": "status"
 }
