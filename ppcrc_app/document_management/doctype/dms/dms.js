@@ -33,9 +33,9 @@
 //         }
 
 //         // // Disable delete button for 'document_version_list' table for non-System Managers
-//         if (!frappe.user.has_role('System Manager')) {
-//             frm.fields_dict['document_version_list'].grid.wrapper.find('.grid-remove-rows').hide();
-//         }
+        // if (!frappe.user.has_role('System Manager')) {
+        //     frm.fields_dict['document_version_list'].grid.wrapper.find('.grid-remove-rows').hide();
+        // }
 
 //         // Add Approve and Reject buttons for approving authority if status is 'Pending'
 //         if (frm.doc.status ==='Pending' && frappe.session.user === frm.doc.approving_authority_id) {
@@ -167,6 +167,10 @@ frappe.ui.form.on("DMS", {
 
         frm.remove_custom_button(__('Approve'));
         frm.remove_custom_button(__('Reject'));
+
+        if (!frappe.user.has_role('System Manager')) {
+            frm.fields_dict['document_version_list'].grid.wrapper.find('.grid-remove-rows').hide();
+        }
 
         
         if (frm.doc.status === 'Pending' && frappe.session.user === frm.doc.approving_authority_id) {

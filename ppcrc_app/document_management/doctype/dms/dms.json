@@ -241,6 +241,7 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "columns": 3,
    "fieldname": "document_version_list",
    "fieldtype": "Table",
@@ -257,7 +258,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-19 17:31:46.318490",
+ "modified": "2024-06-19 18:03:59.208835",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "DMS",
