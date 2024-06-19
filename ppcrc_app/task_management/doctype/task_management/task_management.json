@@ -8,13 +8,13 @@
  "field_order": [
   "task_management_section",
   "entity_name",
-  "regulating_authority",
   "task_category",
+  "task_name",
   "task_frequency",
   "column_break_pzho",
-  "task_name",
-  "status",
+  "regulating_authority",
   "task_sub_category",
+  "status",
   "priority",
   "timeline_section",
   "alert_notification_date",
@@ -77,8 +77,9 @@
   },
   {
    "fieldname": "task_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Task Name",
+   "options": "Task Name",
    "unique": 1
   },
   {
@@ -157,7 +158,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-18 21:15:28.562411",
+ "modified": "2024-06-19 16:08:31.759868",
  "modified_by": "Administrator",
  "module": "Task Management",
  "name": "Task Management",

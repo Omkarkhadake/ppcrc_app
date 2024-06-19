@@ -1,0 +1,33 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "creation": "2024-06-19 10:47:32.451719",
+ "date_changed": "task_due_date",
+ "days_in_advance": 10,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Task Management",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Add your message here</p>\n",
+ "message_type": "Markdown",
+ "modified": "2024-06-19 10:47:32.451719",
+ "modified_by": "Administrator",
+ "module": "Task Management",
+ "name": "Task due Date",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Head of Trust"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "Info Ppcrc",
+ "sender_email": "info.ppcrc@isquareit.edu.in",
+ "subject": "{{doc.task_name}}-{{doc.entity_code}}-{{doc.task_category}}-{{doc.task_sub_category}}",
+ "value_changed": "alert_notification_date"
+}

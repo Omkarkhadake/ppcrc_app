@@ -6,7 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "document_sub_category"
+  "document_sub_category",
+  "category_document"
  ],
  "fields": [
   {
@@ -16,11 +17,18 @@
    "label": "Document Sub-Category",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "category_document",
+   "fieldtype": "Table",
+   "label": "Category Document",
+   "options": "Child Table Category"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-14 14:00:06.057911",
+ "modified": "2024-06-19 13:36:55.362391",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "Document Sub-Categories",
@@ -42,5 +50,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

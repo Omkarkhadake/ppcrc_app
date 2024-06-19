@@ -37,6 +37,7 @@
   "document_types",
   "document_end_date",
   "document_source",
+  "classification",
   "remarks",
   "amended_from"
  ],
@@ -246,12 +247,18 @@
    "fieldtype": "Table",
    "label": "Document Version List",
    "options": "Document Revision Child Table"
+  },
+  {
+   "fieldname": "classification",
+   "fieldtype": "Select",
+   "label": "Classification",
+   "options": "\nOriginal\nCertified Copy\nTrue Copy\nNotarized Copy\nSelf-attested Photocopy"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-19 09:07:01.324304",
+ "modified": "2024-06-19 16:05:40.839575",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "DMS",

@@ -1,0 +1,21 @@
+{
+ "action": "Create Entry",
+ "action_label": "Create a new IPublication",
+ "creation": "2024-06-19 11:52:10.023377",
+ "description": "# Create an Publication\n\nThe Publication doctype is designed to track and manage faculty publications. It includes essential fields related to publication types and other relevant information. Upon submission, the publication entry is sent to the Head of Department (HOD) or the Portfolio Coordinator for approval. The status of the publication changes based on the decision:\n\nApproved: If approved by the HOD or Portfolio Coordinator.\nRejected: If rejected by the HOD or Portfolio Coordinator.\nThis process ensures a streamlined and transparent tracking system for faculty publications",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2024-06-19 11:52:10.023377",
+ "modified_by": "Administrator",
+ "name": "Create an Publication",
+ "owner": "Administrator",
+ "reference_document": "Publication",
+ "show_form_tour": 0,
+ "show_full_form": 1,
+ "title": "Create an Publication",
+ "validate_action": 1
+}

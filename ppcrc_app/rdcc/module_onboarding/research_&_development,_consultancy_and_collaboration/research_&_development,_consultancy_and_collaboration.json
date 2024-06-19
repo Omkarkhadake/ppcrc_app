@@ -1,0 +1,41 @@
+{
+ "allow_roles": [
+  {
+   "role": "Employee"
+  },
+  {
+   "role": "Instructor"
+  },
+  {
+   "role": "Head of Department"
+  },
+  {
+   "role": "Head of Research and Development"
+  },
+  {
+   "role": "Head of Trust"
+  },
+  {
+   "role": "Head of Trust Coordinator"
+  }
+ ],
+ "creation": "2024-06-19 11:52:35.398831",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://docs.erpnext.com/docs/v14/user/manual/en/setting-up/company-setup",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2024-06-19 11:53:08.038418",
+ "modified_by": "Administrator",
+ "module": "RDCC",
+ "name": "Research & Development, Consultancy and Collaboration",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Create an Publication"
+  }
+ ],
+ "subtitle": "Let's begin your journey with Research & Development, Consultancy and Collaboration",
+ "success_message": "You're ready to start your journey with Research & Development, Consultancy and Collaboration",
+ "title": "Let's begin your journey with Research & Development, Consultancy and Collaboration"
+}

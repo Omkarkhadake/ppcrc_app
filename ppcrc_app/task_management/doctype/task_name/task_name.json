@@ -1,38 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:categories",
- "creation": "2024-06-14 13:55:17.362078",
+ "autoname": "field:task_name",
+ "creation": "2024-06-19 16:06:28.719493",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "categories",
-  "approving_authority"
+  "task_name"
  ],
  "fields": [
   {
-   "fieldname": "categories",
+   "fieldname": "task_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Categories",
+   "label": "Task Name",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "approving_authority",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Approving Authority",
-   "options": "User",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-19 12:21:34.065469",
+ "modified": "2024-06-19 16:07:16.961824",
  "modified_by": "Administrator",
- "module": "Document Management",
- "name": "Document Categories",
+ "module": "Task Management",
+ "name": "Task Name",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
@@ -51,5 +42,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

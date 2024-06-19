@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-19 12:24:46.217582",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category_document"
+ ],
+ "fields": [
+  {
+   "fieldname": "category_document",
+   "fieldtype": "Link",
+   "label": "Category Document",
+   "options": "Document Categories"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-19 12:25:05.966184",
+ "modified_by": "Administrator",
+ "module": "Document Management",
+ "name": "Child Table Category",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
