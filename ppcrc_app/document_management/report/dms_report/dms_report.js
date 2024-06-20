@@ -58,12 +58,6 @@ frappe.query_reports["DMS Report"] = {
             "options": "\nConfidential\nPublic\nPrivate\nGeneral"
         },
 		{
-            "fieldname": "document_version",
-            "label": __("Document Version"),
-            "fieldtype": "Link",
-            "options": "Document Version"
-        },
-		{
             "fieldname": "fiscal_year",
             "label": __("Fiscal Year"),
             "fieldtype": "Link",

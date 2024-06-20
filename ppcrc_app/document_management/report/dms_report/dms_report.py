@@ -36,7 +36,6 @@ def execute(filters=None):
             'document_number': d.document_number,
             'document_date': d.document_date,
             'application_number': d.application_number,
-            'document_version': d.document_version,
             'custodian_of_original_document': d.custodian_of_original_document,
             'custodian_email': d.custodian_email,
             'document_format': d.document_format,
@@ -155,13 +154,6 @@ def get_columns():
             'width': '120'
         },
         {
-            "fieldname": "document_version",
-            "label": _("Document Version"),
-            "fieldtype": "Link",
-            "options": "Document Version",
-            'width': '120'
-        },
-        {
             "fieldname": "custodian_of_original_document",
             "label": _("Custodian of Original Document"),
             "fieldtype": "Link",
@@ -249,7 +241,7 @@ def get_cs_data(filters):
         fields=[
             'entity_name', 'fiscal_year', 'employee', 'designation', 'document_creation_date', 'employee_name', 
             'email_id', 'government_bodies_and_regulators', 'document_categories', 'approving_authority_id', 'document_sub_categories', 
-            'document_name', 'document_number', 'document_date', 'status', 'application_number', 'document_version', 
+            'document_name', 'document_number', 'document_date', 'status', 'application_number',
             'custodian_of_original_document', 'custodian_email', 'document_format', 'document_access_profile', 'document_types',
             'document_status', 'document_source', 'document_start_date', 'document_end_date', 'website_reference', 'remarks'
         ],
