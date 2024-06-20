@@ -52,13 +52,15 @@
    "fieldname": "publication",
    "fieldtype": "Link",
    "label": "Publication",
-   "options": "Publication Type"
+   "options": "Publication Type",
+   "reqd": 1
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Link",
    "label": "Academic Year",
-   "options": "Academic Year"
+   "options": "Academic Year",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_fhuh",
@@ -76,7 +78,8 @@
    "fieldname": "employee_id",
    "fieldtype": "Data",
    "label": "Employee Id",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "bold": 1,
@@ -99,32 +102,38 @@
   {
    "fieldname": "iisn_isbn",
    "fieldtype": "Data",
-   "label": "ISSN/ISBN (e.g.,\"xxxx-xxxx\")"
+   "label": "ISSN/ISBN (e.g.,\"xxxx-xxxx\")",
+   "reqd": 1
   },
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title of Paper"
+   "label": "Title of Paper",
+   "reqd": 1
   },
   {
    "fieldname": "indexed",
    "fieldtype": "Data",
-   "label": "Indexed in SCI/Scopus/Web of Science/IEEE, Google Scholar etc."
+   "label": "Indexed in SCI/Scopus/Web of Science/IEEE, Google Scholar etc.",
+   "reqd": 1
   },
   {
    "fieldname": "impact_factor",
    "fieldtype": "Data",
-   "label": "Impact Factor (e.g.,\"xx-xx\")"
+   "label": "Impact Factor (e.g.,\"xx-xx\")",
+   "reqd": 1
   },
   {
    "fieldname": "citation",
    "fieldtype": "Data",
-   "label": "Citation (e.g.,\"xx\")"
+   "label": "Citation (e.g.,\"xx\")",
+   "reqd": 1
   },
   {
    "fieldname": "page_numbers",
    "fieldtype": "Data",
-   "label": "Page Number(e.g.,\"xx-xx\")"
+   "label": "Page Number(e.g.,\"xx-xx\")",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -151,58 +160,68 @@
    "fieldname": "financial_year",
    "fieldtype": "Link",
    "label": "Financial Year",
-   "options": "Fiscal Year"
+   "options": "Fiscal Year",
+   "reqd": 1
   },
   {
    "fieldname": "national_international",
    "fieldtype": "Select",
    "label": "Type",
-   "options": "\nNational\nInternational"
+   "options": "\nNational\nInternational",
+   "reqd": 1
   },
   {
    "fieldname": "place_of_publication",
    "fieldtype": "Data",
-   "label": "Place of Publication"
+   "label": "Place of Publication",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_publication",
    "fieldtype": "Date",
-   "label": "Date of Publication"
+   "label": "Date of Publication",
+   "reqd": 1
   },
   {
    "fieldname": "publisher",
    "fieldtype": "Data",
-   "label": "Publisher"
+   "label": "Publisher",
+   "reqd": 1
   },
   {
    "fieldname": "linkdoi",
    "fieldtype": "Data",
-   "label": "Link/DOI"
+   "label": "Link/DOI",
+   "reqd": 1
   },
   {
    "fieldname": "affiliation",
    "fieldtype": "Data",
-   "label": "Affiliation"
+   "label": "Affiliation",
+   "reqd": 1
   },
   {
    "fieldname": "is_ugc_care_listed_",
    "fieldtype": "Select",
    "label": "Is UGC Care Listed ?",
-   "options": "\nYes\nNo"
+   "options": "\nYes\nNo",
+   "reqd": 1
   },
   {
    "description": "(upload image to verify UGC Care List)",
    "documentation_url": "https://www.ilovepdf.com/compress_pdf",
    "fieldname": "proof",
    "fieldtype": "Attach",
-   "label": "Proof "
+   "label": "Proof ",
+   "reqd": 1
   },
   {
    "description": " (Attach Entire Document)",
    "documentation_url": "https://www.ilovepdf.com/compress_pdf",
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -246,7 +265,8 @@
   {
    "fieldname": "volume",
    "fieldtype": "Data",
-   "label": "Volume(e.g.,\"xx\")"
+   "label": "Volume(e.g.,\"xx\")",
+   "reqd": 1
   },
   {
    "fetch_from": "program.custom_head_of_department_user_id",
@@ -254,7 +274,8 @@
    "fieldtype": "Link",
    "label": "Publication Approver (HoD)",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "program.custom_portfolio_coordinator_user_id",
@@ -262,13 +283,14 @@
    "fieldtype": "Link",
    "label": "Publication Approver (PO)",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-12 10:00:25.512486",
+ "modified": "2024-06-20 11:17:40.696336",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Publication",
@@ -292,6 +314,7 @@
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -301,6 +324,15 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1
   }
  ],
  "sort_field": "modified",

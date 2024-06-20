@@ -6,10 +6,10 @@
  "docstatus": 0,
  "doctype": "Report",
  "filters": [],
- "idx": 1,
+ "idx": 5,
  "is_standard": "Yes",
  "letterhead": null,
- "modified": "2024-06-17 10:03:52.830549",
+ "modified": "2024-06-20 11:12:33.010636",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Grants Report",
@@ -29,19 +29,25 @@
    "role": "Head of Trust"
   },
   {
-   "role": "Head of Trust Coordinator"
+   "role": "Senior Coordinator - Trust Office"
   },
   {
    "role": "Portfolio Coordinator"
   },
   {
-   "role": "Pricipal"
+   "role": "Principal"
   },
   {
    "role": "Institute Coordinator"
   },
   {
    "role": "Trust office Coordinator"
+  },
+  {
+   "role": "Registrar"
+  },
+  {
+   "role": "Accounts Manager"
   }
  ]
 }

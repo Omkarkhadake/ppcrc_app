@@ -107,15 +107,14 @@
   {
    "fetch_from": "instructor.department",
    "fieldname": "department",
-   "fieldtype": "Link",
-   "label": "Department",
-   "options": "Department"
+   "fieldtype": "Data",
+   "label": "Department"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-11 15:49:02.744135",
+ "modified": "2024-06-20 11:13:49.949459",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Awards and Recognition",
