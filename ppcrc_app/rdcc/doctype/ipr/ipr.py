@@ -24,10 +24,10 @@ class IPR(Document):
         self.status = "Rejected"
         self.save()
         
-    @frappe.whitelist()
-    def cancel(self):
-        self.status = "Cancelled"
-        self.save()
+    # @frappe.whitelist()
+    # def cancel(self):
+    #     self.status = "Cancelled"
+    #     self.save()
         
 import frappe
 

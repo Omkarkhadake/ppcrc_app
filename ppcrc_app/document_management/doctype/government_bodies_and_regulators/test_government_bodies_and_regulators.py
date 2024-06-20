@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestGovernmentbodiesandRegulators(FrappeTestCase):
+class TestGovernmentBodiesandRegulators(FrappeTestCase):
 	pass

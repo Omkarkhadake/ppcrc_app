@@ -36,7 +36,8 @@
    "fieldname": "entity_name",
    "fieldtype": "Link",
    "label": "Entity Name",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "regulating_authority",
@@ -58,7 +59,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Task Category",
-   "options": "Task Category"
+   "options": "Task Category",
+   "reqd": 1
   },
   {
    "fieldname": "task_frequency",
@@ -69,7 +71,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Task Frequency",
-   "options": "\nOne-time\nYearly\nHalf-yearly\nQuarterly\nBi-monthly\nMonthly\nFortnightly\nWeekly\nDaily"
+   "options": "\nOne-time\nYearly\nHalf-yearly\nQuarterly\nBi-monthly\nMonthly\nFortnightly\nWeekly\nDaily",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_pzho",
@@ -80,13 +83,15 @@
    "fieldtype": "Link",
    "label": "Task Name",
    "options": "Task Name",
+   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleted\nCancelled"
+   "options": "Open\nWorking\nPending Review\nOverdue\nTemplate\nCompleted\nCancelled",
+   "reqd": 1
   },
   {
    "fieldname": "priority",
@@ -97,7 +102,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Priority",
-   "options": "Low\nMedium\nHigh\nUrgent"
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "reqd": 1
   },
   {
    "fieldname": "task_sub_category",
@@ -108,7 +114,8 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Task Sub-Category",
-   "options": "Task Sub-Category"
+   "options": "Task Sub-Category",
+   "reqd": 1
   },
   {
    "fieldname": "timeline_section",
@@ -119,7 +126,8 @@
    "default": "Today",
    "fieldname": "alert_notification_date",
    "fieldtype": "Date",
-   "label": "Alert Notification Date"
+   "label": "Alert Notification Date",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_dgyc",
@@ -128,17 +136,20 @@
   {
    "fieldname": "task_due_date",
    "fieldtype": "Date",
-   "label": "Task Due Date"
+   "label": "Task Due Date",
+   "reqd": 1
   },
   {
    "fieldname": "expected_start_date",
    "fieldtype": "Date",
-   "label": "Expected Start Date"
+   "label": "Expected Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "expected_end_date",
    "fieldtype": "Date",
-   "label": "Expected End Date"
+   "label": "Expected End Date",
+   "reqd": 1
   },
   {
    "fieldname": "details_section",
@@ -153,12 +164,13 @@
   {
    "fieldname": "completed_on",
    "fieldtype": "Date",
-   "label": "Completed On"
+   "label": "Completed On",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 11:06:53.518802",
+ "modified": "2024-06-20 20:08:11.959248",
  "modified_by": "Administrator",
  "module": "Task Management",
  "name": "Task Management",

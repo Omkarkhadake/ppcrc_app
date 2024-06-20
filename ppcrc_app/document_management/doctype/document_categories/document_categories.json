@@ -23,13 +23,12 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Approving Authority",
-   "options": "User",
-   "reqd": 1
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 10:51:30.328239",
+ "modified": "2024-06-20 20:22:14.785472",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "Document Categories",

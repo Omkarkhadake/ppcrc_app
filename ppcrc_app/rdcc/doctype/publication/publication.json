@@ -146,7 +146,7 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "\nDraft\nPending\nApproved\nRejected\nCancelled",
+   "options": "\nDraft\nPending\nApproved\nRejected",
    "read_only": 1,
    "reqd": 1
   },
@@ -290,7 +290,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 11:17:40.696336",
+ "modified": "2024-06-20 19:23:33.126938",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Publication",

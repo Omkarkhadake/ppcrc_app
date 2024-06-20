@@ -17,9 +17,9 @@
   "fiscal_year",
   "employee_id",
   "program",
-  "amended_from",
   "grants_approver_hod",
   "grants_approver_po",
+  "amended_from",
   "details_tab",
   "name_of_the_principal_investigator",
   "name_of_project",
@@ -61,15 +61,18 @@
   {
    "fieldname": "instructor",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Instructor",
-   "options": "Instructor"
+   "options": "Instructor",
+   "reqd": 1
   },
   {
    "fetch_from": "instructor.employee",
    "fieldname": "employee_id",
    "fieldtype": "Data",
    "label": "Employee Id",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_dfns",
@@ -81,37 +84,45 @@
    "fieldtype": "Link",
    "label": "Program",
    "options": "Program",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Academic Year",
-   "options": "Academic Year"
+   "options": "Academic Year",
+   "reqd": 1
   },
   {
    "fieldname": "fiscal_year",
    "fieldtype": "Link",
    "label": "Fiscal Year",
-   "options": "Fiscal Year"
+   "options": "Fiscal Year",
+   "reqd": 1
   },
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
   },
   {
    "fieldname": "co_principal_inventors",
    "fieldtype": "Table",
    "label": "Co-Principal Inventor's",
-   "options": "Coauthors"
+   "options": "Coauthors",
+   "reqd": 1
   },
   {
    "fetch_from": "instructor.instructor_name",
    "fieldname": "name_of_the_principal_investigator",
    "fieldtype": "Data",
    "label": "Name of the Principal Investigator",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yrhj",
@@ -123,12 +134,14 @@
    "fieldtype": "Link",
    "label": "Department of Principal Investigator",
    "options": "Program",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "name_of_project",
    "fieldtype": "Data",
-   "label": "Name of project"
+   "label": "Name of project",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -137,46 +150,58 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "\nDraft\nPending\nApproved\nRejected",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "amount_sanctioned",
    "fieldtype": "Currency",
    "label": "Amount Sanctioned",
+   "non_negative": 1,
    "options": "Company:company:default_currency",
-   "precision": "2"
+   "precision": "2",
+   "reqd": 1
   },
   {
    "fieldname": "duration_of_the_project",
    "fieldtype": "Data",
-   "label": "Duration of the project"
+   "label": "Duration of the project",
+   "reqd": 1
   },
   {
    "fieldname": "research_type",
    "fieldtype": "Select",
    "label": "Research Type",
-   "options": "\nNon-Government\nGovernment\nNone of above"
+   "options": "\nNon-Government\nGovernment\nNone of above",
+   "reqd": 1
   },
   {
    "fieldname": "name_of_the_funding_agency",
    "fieldtype": "Data",
-   "label": "Name of the Funding Agency"
+   "label": "Name of the Funding Agency",
+   "reqd": 1
   },
   {
+   "description": "(Max 25 MB)",
+   "documentation_url": "https://www.ilovepdf.com/compress_pdf",
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "reqd": 1
   },
   {
    "fieldname": "grant",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Grant",
-   "options": "Grants Type"
+   "options": "Grants Type",
+   "reqd": 1
   },
   {
    "fieldname": "date_of_award",
    "fieldtype": "Date",
-   "label": "Date of Award"
+   "label": "Date of Award",
+   "reqd": 1
   },
   {
    "fetch_from": "program.custom_head_of_department_user_id",
@@ -184,7 +209,8 @@
    "fieldtype": "Link",
    "label": "Grants Approver (HoD)",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "program.custom_portfolio_coordinator_user_id",
@@ -192,13 +218,14 @@
    "fieldtype": "Link",
    "label": "Grants Approver (PO)",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-17 10:54:18.998253",
+ "modified": "2024-06-20 15:24:05.953941",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Grants",

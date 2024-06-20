@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "document_sub_category",
-  "category_document"
+  "document_category"
  ],
  "fields": [
   {
@@ -19,16 +19,15 @@
    "unique": 1
   },
   {
-   "columns": 1,
-   "fieldname": "category_document",
-   "fieldtype": "Table",
-   "label": "Category Document",
-   "options": "Child Table Category"
+   "fieldname": "document_category",
+   "fieldtype": "Link",
+   "label": "Document Category",
+   "options": "Document Categories"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 10:53:12.320434",
+ "modified": "2024-06-20 19:55:22.955290",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "Document Sub-Categories",

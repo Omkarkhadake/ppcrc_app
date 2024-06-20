@@ -18,9 +18,9 @@
   "column_break_pcpn",
   "affiliation",
   "finacial_year",
-  "amended_from",
   "co_inventors",
   "ipr_approver_po",
+  "amended_from",
   "deatils_tab",
   "section_break_ojxh",
   "title",
@@ -60,24 +60,28 @@
    "fieldname": "academic_year",
    "fieldtype": "Link",
    "label": "Academic Year",
-   "options": "Academic Year"
+   "options": "Academic Year",
+   "reqd": 1
   },
   {
    "fieldname": "finacial_year",
    "fieldtype": "Link",
    "label": "Finacial Year",
-   "options": "Fiscal Year"
+   "options": "Fiscal Year",
+   "reqd": 1
   },
   {
    "fieldname": "field_date",
    "fieldtype": "Date",
-   "label": "Field Date"
+   "label": "Field Date",
+   "reqd": 1
   },
   {
    "fieldname": "instructors",
    "fieldtype": "Link",
    "label": "Inventor/s Name",
-   "options": "Instructor"
+   "options": "Instructor",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_pcpn",
@@ -86,18 +90,21 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title"
+   "label": "Title",
+   "reqd": 1
   },
   {
    "fieldname": "co_inventors",
    "fieldtype": "Table",
    "label": "Co-Inventor's",
-   "options": "Coauthors"
+   "options": "Coauthors",
+   "reqd": 1
   },
   {
    "fieldname": "registration_no",
    "fieldtype": "Data",
-   "label": "Registration No."
+   "label": "Registration No.",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -105,30 +112,37 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nDraft\nPending\nApproved\nRejected\nCancelled",
-   "read_only": 1
+   "options": "\nDraft\nPending\nApproved\nRejected",
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "application_no",
    "fieldtype": "Data",
-   "label": "Application No."
+   "label": "Application No.",
+   "reqd": 1
   },
   {
    "fieldname": "affiliation",
    "fieldtype": "Data",
-   "label": "Affiliation"
+   "label": "Affiliation",
+   "reqd": 1
   },
   {
+   "description": "(Max 25 MB)",
+   "documentation_url": "https://www.ilovepdf.com/compress_pdf",
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "reqd": 1
   },
   {
    "fetch_from": "instructors.employee",
    "fieldname": "employee_id",
    "fieldtype": "Data",
    "label": "Employee Id",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "instructors.custom_program",
@@ -136,17 +150,20 @@
    "fieldtype": "Link",
    "label": "Program",
    "options": "Program",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "published_date_or_granted_date",
    "fieldtype": "Date",
-   "label": "Published Date / Granted Date "
+   "label": "Published Date / Granted Date ",
+   "reqd": 1
   },
   {
    "fieldname": "publication_number_or_granted_number",
    "fieldtype": "Data",
-   "label": "Publication Number / Granted Number"
+   "label": "Publication Number / Granted Number",
+   "reqd": 1
   },
   {
    "fieldname": "profile_tab",
@@ -157,7 +174,8 @@
    "fieldname": "status_of_ipr",
    "fieldtype": "Select",
    "label": "Status of IPR",
-   "options": "\nGranted\nPublished"
+   "options": "\nGranted\nPublished",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_ojxh",
@@ -178,7 +196,8 @@
    "fieldtype": "Link",
    "label": "IPR Approver (HoD)",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "program.custom_portfolio_coordinator_user_id",
@@ -186,13 +205,14 @@
    "fieldtype": "Link",
    "label": "IPR Approver (PO)",
    "options": "User",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-12 10:17:58.822631",
+ "modified": "2024-06-20 19:25:28.075515",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "IPR",
@@ -264,5 +284,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

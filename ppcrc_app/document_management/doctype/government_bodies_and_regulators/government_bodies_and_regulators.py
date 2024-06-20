@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class GovernmentbodiesandRegulators(Document):
+class GovernmentBodiesandRegulators(Document):
 	pass

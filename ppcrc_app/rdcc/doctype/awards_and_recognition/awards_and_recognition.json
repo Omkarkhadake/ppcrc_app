@@ -25,8 +25,10 @@
   {
    "fieldname": "instructor",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Instructor",
-   "options": "Instructor"
+   "options": "Instructor",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_tzni",
@@ -37,39 +39,49 @@
    "fieldname": "employee_id",
    "fieldtype": "Data",
    "label": "Employee Id",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fetch_from": "instructor.custom_program",
    "fieldname": "program",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Program",
    "options": "Program",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "award_date",
    "fieldtype": "Date",
-   "label": "Award Date"
+   "label": "Award/Recognition Date",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "\nDraft\nPending\nApproved\nRejected",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "details",
    "fieldtype": "Small Text",
-   "label": "Details"
+   "label": "Details",
+   "reqd": 1
   },
   {
+   "description": "(Max 25 MB)",
+   "documentation_url": "https://www.ilovepdf.com/",
    "fieldname": "attachment",
    "fieldtype": "Attach",
-   "label": "Attachment"
+   "label": "Attachment",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -83,38 +95,45 @@
   },
   {
    "fieldname": "award_title",
-   "fieldtype": "Data",
-   "label": "Award Title"
+   "fieldtype": "Select",
+   "label": "Award",
+   "options": "\nAward\nRecognition\nOthers",
+   "reqd": 1
   },
   {
    "fieldname": "institute",
    "fieldtype": "Link",
    "label": "Institute",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "fieldname": "academic_year",
    "fieldtype": "Link",
    "label": "Academic Year",
-   "options": "Academic Year"
+   "options": "Academic Year",
+   "reqd": 1
   },
   {
    "fieldname": "fiscal_year",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Fiscal Year",
-   "options": "Fiscal Year"
+   "options": "Fiscal Year",
+   "reqd": 1
   },
   {
    "fetch_from": "instructor.department",
    "fieldname": "department",
    "fieldtype": "Data",
-   "label": "Department"
+   "label": "Department",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 11:13:49.949459",
+ "modified": "2024-06-20 19:36:50.242826",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Awards and Recognition",

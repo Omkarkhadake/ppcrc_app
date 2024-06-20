@@ -26,7 +26,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-08 09:31:09.670791",
+ "modified": "2024-06-20 15:14:13.394583",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Publication Type",
@@ -78,5 +78,8 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

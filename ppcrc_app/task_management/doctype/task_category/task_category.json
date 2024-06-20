@@ -6,8 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "task_category",
-  "regulating"
+  "task_category"
  ],
  "fields": [
   {
@@ -17,17 +16,11 @@
    "label": "Task Category",
    "reqd": 1,
    "unique": 1
-  },
-  {
-   "fieldname": "regulating",
-   "fieldtype": "Link",
-   "label": "Regulating",
-   "options": "Regulating Authority"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 13:22:08.950830",
+ "modified": "2024-06-20 19:57:18.913962",
  "modified_by": "Administrator",
  "module": "Task Management",
  "name": "Task Category",
