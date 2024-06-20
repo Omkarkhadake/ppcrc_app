@@ -54,4 +54,6 @@ def get_user_mail_id(user=None):
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "Failed to fetch user details")
         return None
-    
+
+
+

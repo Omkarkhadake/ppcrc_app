@@ -1,6 +1,4 @@
 
-// This code is working Good and This is Final code
-
 frappe.ui.form.on("DMS", {
     onload: function(frm) {
         if (frm.is_new()) {
@@ -132,5 +130,3 @@ frappe.ui.form.on("DMS", {
         frm.save_or_update();
     }
 });
-
-

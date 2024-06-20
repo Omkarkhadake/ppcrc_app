@@ -1,6 +1,3 @@
-
-// This code is working Good and This is Final code
-
 frappe.ui.form.on("DMS", {
     onload: function(frm) {
         if (frm.is_new()) {
@@ -19,7 +16,7 @@ frappe.ui.form.on("DMS", {
                         console.log("Email ID:", email);
                         console.log("Employee ID:", employee_id);
                         console.log("Employee Name:", employee_name);
-                        console.log("Employee Designation:", designation);
+                        console.log("Employee designation:", designation);
 
                         frm.set_value('employee', employee_id);
                         frm.set_value('email_id', email);
@@ -35,24 +32,13 @@ frappe.ui.form.on("DMS", {
             });
         }
 
-        // Add Approve and Reject buttons for approving authority if status is 'Pending'
-        console.log("frm.doc.status", frm.doc.status);
-        console.log("frm.doc.approving_authority_id", frm.doc.approving_authority_id);
-        console.log("frappe.session.user", frappe.session.user);
-
-
-    },
-    refresh: function(frm) {
-
-        frm.remove_custom_button(__('Approve'));
-        frm.remove_custom_button(__('Reject'));
-
+        // // Disable delete button for 'document_version_list' table for non-System Managers
         if (!frappe.user.has_role('System Manager')) {
             frm.fields_dict['document_version_list'].grid.wrapper.find('.grid-remove-rows').hide();
         }
 
-        
-        if (frm.doc.status === 'Pending' && frappe.session.user === frm.doc.approving_authority_id) {
+        // Add Approve and Reject buttons for approving authority if status is 'Pending'
+        if (frm.doc.status ==='Pending' && frappe.session.user === frm.doc.approving_authority_id) {
             frm.add_custom_button(__('Approve'), function() {
                 frm.call('approve').then(() => {
                     frm.reload_doc();
@@ -67,6 +53,8 @@ frappe.ui.form.on("DMS", {
                 });
             }, __("Action"));
         }
+        console.log("frm.doc.approving_authority_id",frm.doc.approving_authority_id)
+        console.log("frappe.session.user",frappe.session.user)
 
         // Show "Request for this document" button only when document status is Submitted and Approved
         if (frm.doc.docstatus === 1 && frm.doc.status === "Approved") {
@@ -124,7 +112,6 @@ frappe.ui.form.on("DMS", {
                 }
             });
         }
-
     },
 
     on_submit: function(frm) {
@@ -132,5 +119,3 @@ frappe.ui.form.on("DMS", {
         frm.save_or_update();
     }
 });
-
-
