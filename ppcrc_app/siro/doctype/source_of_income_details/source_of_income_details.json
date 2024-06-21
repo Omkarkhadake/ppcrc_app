@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:donor_name",
+ "creation": "2024-06-21 10:56:55.013759",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "donor_name",
+  "donation_amount_in_lakhs",
+  "purpose"
+ ],
+ "fields": [
+  {
+   "fieldname": "donor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Donor Name ",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "donation_amount_in_lakhs",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Donation Amount (in Lakhs)",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Small Text",
+   "label": "Purpose",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 12:19:47.105982",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "Source of Income Details",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Research and Development",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Coordinator - Trust Office",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Registrar",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

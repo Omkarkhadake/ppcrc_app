@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title_and_scope_of_project",
+ "creation": "2024-06-21 10:23:21.786099",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title_and_scope_of_project",
+  "project_leader",
+  "duration_in_months",
+  "recurring_in_lakhs",
+  "foreign_exchangein_inr",
+  "specified_equipment_to_be_purchased",
+  "column_break_gyau",
+  "sponsoring_agency_if_any",
+  "proposed_year_of_start",
+  "capital_in_lakhs",
+  "total_in_lakhs",
+  "remark",
+  "specialized_raw_material"
+ ],
+ "fields": [
+  {
+   "fieldname": "title_and_scope_of_project",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title and scope of project",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "project_leader",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project leader",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_in_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Duration in months",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gyau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sponsoring_agency_if_any",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sponsoring Agency if any",
+   "reqd": 1
+  },
+  {
+   "fieldname": "proposed_year_of_start",
+   "fieldtype": "Date",
+   "label": "Proposed Year of start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capital_in_lakhs",
+   "fieldtype": "Currency",
+   "label": "Capital (in lakhs)",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recurring_in_lakhs",
+   "fieldtype": "Currency",
+   "label": "Recurring (in lakhs)",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_in_lakhs",
+   "fieldtype": "Currency",
+   "label": "Total (in lakhs)",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "foreign_exchangein_inr",
+   "fieldtype": "Currency",
+   "label": "Foreign Exchange(in INR)",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specified_equipment_to_be_purchased",
+   "fieldtype": "Data",
+   "label": " Specified equipment to be purchased",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark",
+   "reqd": 1
+  },
+  {
+   "fieldname": "specialized_raw_material",
+   "fieldtype": "Data",
+   "label": "Specialized raw material",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 12:21:10.737094",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "Future Research Programmes",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Research and Development",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Coordinator - Trust Office",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Registrar",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

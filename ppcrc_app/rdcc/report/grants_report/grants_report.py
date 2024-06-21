@@ -39,7 +39,8 @@ def execute(filters=None):
             'date_of_award': d.date_of_award,
             'duration_of_the_project': d.duration_of_the_project,
             'research_type': d.research_type,
-            'attachment': d.attachment
+            'attachment': d.attachment,
+            'grants_status':d.grants_status
         })
         data.append(row)
 
@@ -180,6 +181,12 @@ def get_columns():
             'width': '120'
         },
         {
+            "fieldname": "grants_status",
+            "label": _("Grants Status"),
+            "fieldtype": "Data",
+            'width': '120'            
+        },
+        {
             "fieldname": "attachment",
             "label": _("Attachment"),
             "fieldtype": "Data",
@@ -195,7 +202,7 @@ def get_cs_data(filters, associated_programs):
         fields=[
             'grant', 'date', 'instructor', 'academic_year', 'fiscal_year', 'employee_id', 
             'program', 'name_of_the_principal_investigator', 'department_of_principal_investigator', 'name_of_project', 'date_of_award', 
-            'amount_sanctioned', 'name_of_the_funding_agency', 'research_type', 'status', 'attachment'
+            'amount_sanctioned', 'name_of_the_funding_agency', 'research_type', 'status', 'attachment','grants_status'
         ],
         filters=conditions
     )

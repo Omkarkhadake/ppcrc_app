@@ -26,6 +26,7 @@
   "amended_from",
   "column_break_myoj",
   "national_international",
+  "publication_status",
   "affiliation",
   "publisher",
   "is_ugc_care_listed_",
@@ -285,12 +286,24 @@
    "options": "User",
    "read_only": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "publication_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Publication Status",
+   "options": "\nOngoing\nCompleted",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 19:23:33.126938",
+ "modified": "2024-06-21 09:47:40.080616",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Publication",

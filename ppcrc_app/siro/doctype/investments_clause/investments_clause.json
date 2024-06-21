@@ -1,0 +1,172 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-21 12:08:19.101656",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fixed_deposits_with_scheduled_banks",
+  "in_securities",
+  "cash_in_hand",
+  "column_break_foew",
+  "fixed_deposits_with_companies",
+  "in_shares__debentures",
+  "others"
+ ],
+ "fields": [
+  {
+   "fieldname": "fixed_deposits_with_scheduled_banks",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fixed deposits with scheduled banks",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fixed_deposits_with_companies",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Fixed deposits with companies",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "in_securities",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "In Securities",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "in_shares__debentures",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "In shares , debentures",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cash_in_hand",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cash in Hand",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Others",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_foew",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 12:26:02.459972",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "Investments Clause",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Research and Development",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Coordinator - Trust Office",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Registrar",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

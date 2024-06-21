@@ -43,13 +43,11 @@
    "reqd": 1
   },
   {
-   "fetch_from": "instructor.custom_program",
    "fieldname": "program",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Program",
    "options": "Program",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -133,7 +131,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 19:36:50.242826",
+ "modified": "2024-06-21 09:29:31.197320",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Awards and Recognition",

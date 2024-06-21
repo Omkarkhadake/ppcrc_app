@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2024-06-21 10:04:09.371361",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "research_advisory_board_section",
+  "name1",
+  "designation",
+  "office_address",
+  "mobile_number",
+  "column_break_qzrw",
+  "internalexternal",
+  "organization",
+  "email",
+  "letter_of_acceptance"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qzrw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "internalexternal",
+   "fieldtype": "Select",
+   "label": "Internal/External",
+   "options": "\nINTERNAL\nEXTERNAL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "office_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Office Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "E-mail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "letter_of_acceptance",
+   "fieldtype": "Select",
+   "label": "Letter of Acceptance",
+   "options": "\nYES\nNO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "research_advisory_board_section",
+   "fieldtype": "Section Break",
+   "label": "Research Advisory Board "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 12:24:33.845139",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "Research Advisory Board Member",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Research and Development",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Coordinator - Trust Office",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Registrar",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

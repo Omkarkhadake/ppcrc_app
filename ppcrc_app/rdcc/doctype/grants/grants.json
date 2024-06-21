@@ -10,6 +10,7 @@
   "section_break_wdor",
   "grant",
   "date",
+  "grants_status",
   "instructor",
   "co_principal_inventors",
   "column_break_dfns",
@@ -220,12 +221,24 @@
    "options": "User",
    "read_only": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "grants_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Grants Status",
+   "options": "\nOngoing\nCompleted",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 15:24:05.953941",
+ "modified": "2024-06-21 09:57:31.967738",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Grants",

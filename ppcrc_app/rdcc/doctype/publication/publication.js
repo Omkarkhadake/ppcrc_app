@@ -53,10 +53,6 @@ frappe.ui.form.on('Publication', {
             });
         }
     },
-    after_cancel: function(frm) {
-        frm.set_value('status', 'Cancelled');
-        frm.save_or_update();
-    },
 });
 
 

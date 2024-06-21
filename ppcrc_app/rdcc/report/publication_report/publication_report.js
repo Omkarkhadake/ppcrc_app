@@ -21,6 +21,12 @@ frappe.query_reports["Publication Report"] = {
             "options": "Instructor"
         },
         {
+            "fieldname": "Publication status",
+            "label": __("publication_status"),
+            "fieldtype": "Select",
+            "options": "\nOngoing\nCompleted"
+        },
+        {
             "fieldname": "status",
             "label": __("Status"),
             "fieldtype": "Select",

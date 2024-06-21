@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-21 10:18:48.784510",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_of_societal_outcomes_of_r_and_d_activities_section",
+  "societal_outcomes_of_r_and_d"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_of_societal_outcomes_of_r_and_d_activities_section",
+   "fieldtype": "Section Break",
+   "label": " Details of societal outcomes of R and D activities"
+  },
+  {
+   "fieldname": "societal_outcomes_of_r_and_d",
+   "fieldtype": "Text Editor",
+   "label": " Societal outcomes of R and D"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 12:22:10.667545",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "Import substitution",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Research and Development",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Coordinator - Trust Office",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Registrar",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

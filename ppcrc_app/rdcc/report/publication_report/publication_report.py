@@ -48,7 +48,8 @@ def execute(filters=None):
             'iisn_isbn': d.iisn_isbn,
             'linkdoi': d.linkdoi,
             'indexed': d.indexed,
-            'attachment': d.attachment   
+            'attachment': d.attachment,
+            'publication_status':.publication_status   
         })
         data.append(row)
 
@@ -208,6 +209,11 @@ def get_columns():
             'width': '120'
         },
         {
+            "fieldname": "Publication status",
+            "label": _("publication_status"),
+            "fieldtype": "Data",
+        },
+        {
             "fieldname": "status",
             "label": _("Status"),
             "fieldtype": "Data",
@@ -254,7 +260,7 @@ def get_cs_data(filters, associated_programs):
             'publication', 'program', 'instructor', 'academic_year', 'date_of_publication', 'employee_id', 
             'title', 'name_of_journal', 'name_of_the_conference', 'financial_year', 'place_of_publication', 
             'national_international', 'affiliation', 'publisher', 'is_ugc_care_listed_', 'proof', 'page_numbers', 
-            'citation', 'volume', 'status', 'impact_factor', 'iisn_isbn', 'linkdoi', 'indexed', 'attachment'
+            'citation', 'volume', 'status', 'impact_factor', 'iisn_isbn', 'linkdoi', 'indexed', 'attachment','publication_status'
         ],
         filters=conditions
     )

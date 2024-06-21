@@ -28,7 +28,12 @@ frappe.query_reports["Grants Report"] = {
             "fieldtype": "Select",
             "options": "\nDraft\nPending\nApproved\nRejected"
         },
-		,
+        {
+            "fieldname": "grants_status",
+            "label": __("Grants Status"),
+            "fieldtype": "Select",
+            "options": "\nOngoing\nCompleted"
+        },
         {
             "fieldname": "academic_year",
             "label": __("Academic Year"),

@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2024-06-21 10:14:58.423048",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "books_books_chapters_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "books_books_chapters_details",
+   "fieldtype": "Text",
+   "label": "Books/Book-Chapters etc. Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 10:18:09.190465",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "New techniques developed",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2024-06-21 12:01:13.110884",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "year",
+  "projects_related",
+  "testing",
+  "column_break_unaz",
+  "grants",
+  "donation",
+  "foreign_contribution",
+  "others",
+  "total_income_in_lakhs"
+ ],
+ "fields": [
+  {
+   "fieldname": "year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Year (YYYY-YYYY)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_unaz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grants",
+   "fieldtype": "Currency",
+   "label": "Grants",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donation",
+   "fieldtype": "Currency",
+   "label": "Donation",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "projects_related",
+   "fieldtype": "Currency",
+   "label": "Project(s) related",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "foreign_contribution",
+   "fieldtype": "Currency",
+   "label": "Foreign Contribution",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "testing",
+   "fieldtype": "Currency",
+   "label": "Testing",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Currency",
+   "label": "Others",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_income_in_lakhs",
+   "fieldtype": "Currency",
+   "label": " Total Income (in Lakhs)",
+   "non_negative": 1,
+   "options": "Company:company:default_currency",
+   "precision": "2",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-21 12:18:39.920800",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "Income and Expenditure",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Research and Development",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Head of Trust",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Trust office Coordinator",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Senior Coordinator - Trust Office",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Principal",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Registrar",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
