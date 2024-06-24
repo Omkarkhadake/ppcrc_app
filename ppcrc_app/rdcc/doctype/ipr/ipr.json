@@ -73,13 +73,13 @@
   {
    "fieldname": "field_date",
    "fieldtype": "Date",
-   "label": "Field Date",
+   "label": "Filed Date",
    "reqd": 1
   },
   {
    "fieldname": "instructors",
    "fieldtype": "Link",
-   "label": "Inventor/s Name",
+   "label": "Inventor's Name",
    "options": "Instructor",
    "reqd": 1
   },
@@ -212,7 +212,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-21 09:53:21.707879",
+ "modified": "2024-06-24 15:22:18.837384",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "IPR",

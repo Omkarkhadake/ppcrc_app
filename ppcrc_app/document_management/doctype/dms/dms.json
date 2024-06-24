@@ -30,11 +30,11 @@
   "column_break_cdlm",
   "document_categories",
   "document_sub_categories",
+  "document_types",
   "document_number",
   "application_number",
   "custodian_of_original_document",
   "document_format",
-  "document_types",
   "document_end_date",
   "document_source",
   "classification",
@@ -131,12 +131,14 @@
   {
    "fieldname": "document_date",
    "fieldtype": "Date",
-   "label": "Document Date"
+   "label": "Document Date",
+   "reqd": 1
   },
   {
    "fieldname": "application_number",
    "fieldtype": "Data",
-   "label": "Application Number"
+   "label": "Application Number",
+   "reqd": 1
   },
   {
    "fetch_from": "custodian_email.full_name",
@@ -157,52 +159,61 @@
    "fieldname": "document_format",
    "fieldtype": "Select",
    "label": "Format",
-   "options": "\nPdf\nExcel\nCSV\nDoc\nImage"
+   "options": "\nPdf\nExcel\nCSV\nDoc\nImage",
+   "reqd": 1
   },
   {
    "fieldname": "document_access_profile",
    "fieldtype": "Select",
    "label": "Access Profile",
-   "options": "\nConfidential\nPublic\nPrivate\nGeneral"
+   "options": "\nConfidential\nPublic\nPrivate\nGeneral",
+   "reqd": 1
   },
   {
    "fieldname": "document_types",
    "fieldtype": "Link",
    "label": "Types",
-   "options": "Document Types"
+   "options": "Document Types",
+   "reqd": 1
   },
   {
    "fieldname": "document_status",
    "fieldtype": "Select",
    "label": "Document Status",
-   "options": "\nDraft\nProvisional\nFinal"
+   "options": "\nDraft\nProvisional\nFinal",
+   "reqd": 1
   },
   {
    "fieldname": "document_source",
    "fieldtype": "Link",
    "label": "Source",
-   "options": "Document Source"
+   "options": "Document Source",
+   "reqd": 1
   },
   {
    "fieldname": "document_start_date",
    "fieldtype": "Date",
-   "label": "Start Date"
+   "label": "Start Date",
+   "reqd": 1
   },
   {
    "fieldname": "document_end_date",
    "fieldtype": "Date",
-   "label": "End Date"
+   "label": "End Date",
+   "reqd": 1
   },
   {
    "fieldname": "website_reference",
    "fieldtype": "Link",
    "label": "Website Reference",
-   "options": "Website Reference"
+   "options": "Website Reference",
+   "reqd": 1
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Data",
-   "label": "Remarks"
+   "label": "Remarks",
+   "reqd": 1
   },
   {
    "allow_on_submit": 1,
@@ -211,7 +222,8 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "\nDraft\nPending\nApproved\nRejected",
-   "read_only": 1
+   "read_only": 1,
+   "reqd": 1
   },
   {
    "fieldname": "employee",
@@ -247,19 +259,21 @@
    "fieldname": "document_version_list",
    "fieldtype": "Table",
    "label": "Document Version List",
-   "options": "Document Revision Child Table"
+   "options": "Document Revision Child Table",
+   "reqd": 1
   },
   {
    "fieldname": "classification",
    "fieldtype": "Select",
    "label": "Classification",
-   "options": "\nOriginal\nCertified Copy\nTrue Copy\nNotarized Copy\nSelf-attested Photocopy"
+   "options": "\nOriginal\nCertified Copy\nTrue Copy\nNotarized Copy\nSelf-attested Photocopy",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-20 19:38:10.667284",
+ "modified": "2024-06-24 16:46:41.004000",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "DMS",

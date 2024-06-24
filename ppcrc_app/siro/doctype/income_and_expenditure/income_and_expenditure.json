@@ -1,112 +1,76 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "format:{academic_year}-{fiscal_year}-{####}",
  "creation": "2024-06-21 12:01:13.110884",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
-  "year",
-  "projects_related",
-  "testing",
+  "overview_section",
+  "academic_year",
   "column_break_unaz",
-  "grants",
-  "donation",
-  "foreign_contribution",
-  "others",
-  "total_income_in_lakhs"
+  "fiscal_year",
+  "section_break_anvz",
+  "income_table",
+  "expenditure_in_lakhs_section",
+  "expenditure_in_lakhs"
  ],
  "fields": [
-  {
-   "fieldname": "year",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Year (YYYY-YYYY)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "reqd": 1,
-   "unique": 1
-  },
   {
    "fieldname": "column_break_unaz",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "grants",
-   "fieldtype": "Currency",
-   "label": "Grants",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year ",
+   "options": "Academic Year",
    "reqd": 1
   },
   {
-   "fieldname": "donation",
-   "fieldtype": "Currency",
-   "label": "Donation",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
    "reqd": 1
   },
   {
-   "fieldname": "projects_related",
-   "fieldtype": "Currency",
-   "label": "Project(s) related",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
-   "reqd": 1
+   "fieldname": "section_break_anvz",
+   "fieldtype": "Section Break",
+   "label": "Income ( in Lakhs )"
   },
   {
-   "fieldname": "foreign_contribution",
-   "fieldtype": "Currency",
-   "label": "Foreign Contribution",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
-   "reqd": 1
+   "columns": 8,
+   "fieldname": "income_table",
+   "fieldtype": "Table",
+   "label": "Income Table",
+   "options": "child income and expenditure"
   },
   {
-   "fieldname": "testing",
-   "fieldtype": "Currency",
-   "label": "Testing",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
-   "reqd": 1
+   "fieldname": "overview_section",
+   "fieldtype": "Section Break",
+   "label": "Overview"
   },
   {
-   "fieldname": "others",
-   "fieldtype": "Currency",
-   "label": "Others",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
-   "reqd": 1
+   "fieldname": "expenditure_in_lakhs_section",
+   "fieldtype": "Section Break",
+   "label": "Expenditure (in Lakhs)"
   },
   {
-   "fieldname": "total_income_in_lakhs",
-   "fieldtype": "Currency",
-   "label": " Total Income (in Lakhs)",
-   "non_negative": 1,
-   "options": "Company:company:default_currency",
-   "precision": "2",
-   "reqd": 1
+   "fieldname": "expenditure_in_lakhs",
+   "fieldtype": "Table",
+   "label": "Expenditure (in Lakhs)",
+   "options": "child income and expenditure"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-21 12:18:39.920800",
+ "modified": "2024-06-24 15:18:28.251362",
  "modified_by": "Administrator",
  "module": "SIRO",
  "name": "Income and Expenditure",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,5 +1,5 @@
 
-// // This code is working Good and This is Final code
+// // // This code is working Good and This is Final code
 
 frappe.ui.form.on("DMS", {
     onload: function(frm) {
@@ -51,7 +51,7 @@ frappe.ui.form.on("DMS", {
             frm.fields_dict['document_version_list'].grid.wrapper.find('.grid-remove-rows').hide();
         }
 
-        
+
         if (frm.doc.status === 'Pending' && frappe.session.user === frm.doc.approving_authority_id) {
             frm.add_custom_button(__('Approve'), function() {
                 frm.call('approve').then(() => {
@@ -137,8 +137,9 @@ frappe.ui.form.on("DMS", {
 
 
 // // //  Below code im working on filtering process Category => Sub-Category => Name
+
 // frappe.ui.form.on("DMS", {
-//     onload: function(frm) {
+//     onload: function (frm) {
 //         if (frm.is_new()) {
 //             // Set the document creation date to today's date
 //             frm.set_value('document_creation_date', frappe.datetime.nowdate());
@@ -149,7 +150,7 @@ frappe.ui.form.on("DMS", {
 //                 args: {
 //                     user: frappe.session.user
 //                 },
-//                 callback: function(response) {
+//                 callback: function (response) {
 //                     if (response.message) {
 //                         const { email, employee_id, employee_name, designation } = response.message;
 //                         console.log("Email ID:", email);
@@ -165,13 +166,31 @@ frappe.ui.form.on("DMS", {
 //                         console.log("Email ID not found or error occurred.");
 //                     }
 //                 },
-//                 error: function(xhr, status, error) {
+//                 error: function (xhr, status, error) {
 //                     console.error("Error fetching user's email ID:", error);
 //                 }
 //             });
 //         }
 //     },
-//     refresh: function(frm) {
+//     refresh: function (frm) {
+
+//         // Set query for document_sub_categories field based on selected categories
+//         frm.set_query("document_sub_categories", function (doc) {
+//             return {
+//                 filters: {
+//                     'document_category': doc.categories
+//                 }
+//             };
+//         });
+
+
+//         frm.set_query("document_types", function (doc) {
+//             return {
+//                 filters: {
+//                     'document_sub_category': doc.document_sub_category
+//                 }
+//             };
+//         });
 //         // Combine all refresh logic here
 
 //         // Remove duplicate buttons
@@ -183,14 +202,14 @@ frappe.ui.form.on("DMS", {
 //         }
 
 //         if (frm.doc.status === 'Pending' && frappe.session.user === frm.doc.approving_authority_id) {
-//             frm.add_custom_button(__('Approve'), function() {
+//             frm.add_custom_button(__('Approve'), function () {
 //                 frm.call('approve').then(() => {
 //                     frm.reload_doc();
 //                     frm.save();
 //                 });
 //             }, __("Action"));
 
-//             frm.add_custom_button(__('Reject'), function() {
+//             frm.add_custom_button(__('Reject'), function () {
 //                 frm.call('reject').then(() => {
 //                     frm.reload_doc();
 //                     frm.save();
@@ -200,7 +219,7 @@ frappe.ui.form.on("DMS", {
 
 //         // Show "Request for this document" button only when document status is Submitted and Approved
 //         if (frm.doc.docstatus === 1 && frm.doc.status === "Approved") {
-//             frm.add_custom_button(__("Request for this document"), function() {
+//             frm.add_custom_button(__("Request for this document"), function () {
 //                 const documentId = frm.doc.name;
 
 //                 if (documentId) {
@@ -208,13 +227,13 @@ frappe.ui.form.on("DMS", {
 //                     frappe.call({
 //                         method: "ppcrc_app.document_management.doctype.dms.dms.get_document_details",
 //                         args: { doc_id: documentId },
-//                         callback: function(response) {
+//                         callback: function (response) {
 //                             if (response.message) {
 //                                 const { document_name, document_number, custodian_of_original_document, custodian_email } = response.message;
 //                                 console.log("Document Details:", response.message);
 
 //                                 // Create a new "Movement of Original Document" and set values
-//                                 frappe.model.with_doctype('Movement of Original Document', function() {
+//                                 frappe.model.with_doctype('Movement of Original Document', function () {
 //                                     var doc = frappe.model.get_new_doc('Movement of Original Document');
 //                                     doc.document_name = document_name;
 //                                     doc.document_number = document_number;
@@ -227,7 +246,7 @@ frappe.ui.form.on("DMS", {
 //                                 frappe.msgprint("Document not found or error occurred.");
 //                             }
 //                         },
-//                         error: function(xhr, status, error) {
+//                         error: function (xhr, status, error) {
 //                             console.error("Error fetching document details:", error);
 //                             frappe.msgprint("Error fetching document details. Please try again.");
 //                         }
@@ -237,7 +256,7 @@ frappe.ui.form.on("DMS", {
 //                     frappe.call({
 //                         method: "ppcrc_app.document_management.doctype.dms.dms.get_user_mail_id",
 //                         args: { user: frappe.session.user },
-//                         callback: function(response) {
+//                         callback: function (response) {
 //                             if (response.message) {
 //                                 console.log("Email ID:", response.message.email);
 //                                 console.log("Employee ID:", response.message.employee_id);
@@ -245,7 +264,7 @@ frappe.ui.form.on("DMS", {
 //                                 console.log("Email ID not found or error occurred.");
 //                             }
 //                         },
-//                         error: function(xhr, status, error) {
+//                         error: function (xhr, status, error) {
 //                             console.error("Error fetching user's email ID:", error);
 //                         }
 //                     });
@@ -255,16 +274,16 @@ frappe.ui.form.on("DMS", {
 //             });
 //         }
 
-//         // Set query for document_sub_categories field based on selected categories
-//         frm.set_query("document_sub_categories", function (doc) {
-//             return {
-//                 "filters": {
-//                     document_category: doc.categories
-//                 }
-//             };
-//         });
+//         // // Set query for document_sub_categories field based on selected categories
+//         // frm.set_query("document_sub_categories", function (doc) {
+//         //     return {
+//         //         filters: {
+//         //             'document_category': doc.categories
+//         //         }
+//         //     };
+//         // });
 //     },
-//     on_submit: function(frm) {
+//     on_submit: function (frm) {
 //         frm.set_value('status', 'Pending');
 //         frm.save_or_update();
 //     }

@@ -49,7 +49,7 @@ def execute(filters=None):
             'linkdoi': d.linkdoi,
             'indexed': d.indexed,
             'attachment': d.attachment,
-            'publication_status':.publication_status   
+            'publication_status':d.publication_status   
         })
         data.append(row)
 

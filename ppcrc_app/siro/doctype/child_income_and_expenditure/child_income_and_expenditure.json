@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-21 14:47:51.148868",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "income",
+  "donations",
+  "foreign_contribution",
+  "others",
+  "column_break_veev",
+  "grants",
+  "projects_related",
+  "testing",
+  "total_income_in_lakhs"
+ ],
+ "fields": [
+  {
+   "fieldname": "income",
+   "fieldtype": "Select",
+   "label": "Income",
+   "options": "\nFor R&D Activities\nFor Non R&D Activities\nTotal Income"
+  },
+  {
+   "fieldname": "donations",
+   "fieldtype": "Currency",
+   "label": "Donations",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "foreign_contribution",
+   "fieldtype": "Currency",
+   "label": "Foreign Contribution",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "others",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Others",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_veev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grants",
+   "fieldtype": "Currency",
+   "label": "Grants",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "projects_related",
+   "fieldtype": "Currency",
+   "label": "Project(s) related",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "testing",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Testing",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_income_in_lakhs",
+   "fieldtype": "Currency",
+   "label": "Total Income (in Lakhs)",
+   "non_negative": 1,
+   "precision": "2",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-24 12:51:07.575509",
+ "modified_by": "Administrator",
+ "module": "SIRO",
+ "name": "child income and expenditure",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
