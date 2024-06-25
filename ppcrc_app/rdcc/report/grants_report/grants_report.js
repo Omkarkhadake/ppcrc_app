@@ -51,6 +51,16 @@ frappe.query_reports["Grants Report"] = {
             "label": __("Date of Award"),
             "fieldtype": "DateRange"
         }
+        // {
+        //     "fieldname": "start_date",
+        //     "label": __("Start Date"),
+        //     "fieldtype": "Date",
+        // },
+        // {
+        //     "fieldname": "end_date",
+        //     "label": __("End Date"),
+        //     "fieldtype": "Date",
+        // },
 	],
     onload: function(report) {
         log_current_user_data();

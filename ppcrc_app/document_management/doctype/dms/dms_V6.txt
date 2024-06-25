@@ -1,4 +1,5 @@
-//  Below code im working on filtering process Category => Sub-Category => Name
+
+// // //  Below code im working on filtering process Category => Sub-Category =>Document Type = > Document Name
 
 frappe.ui.form.on("DMS", {
     onload: function (frm) {

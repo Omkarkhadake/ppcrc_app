@@ -1,4 +1,3 @@
-
 frappe.ui.form.on('Grants', {
     onload: function(frm) {
         console.log("running.........");
@@ -54,38 +53,12 @@ frappe.ui.form.on('Grants', {
             });
         }
     },
-    start_date: function(frm) {
-        calculate_duration(frm);
-    },
-    end_date: function(frm) {
-        calculate_duration(frm);
-    }
+    // after_cancel: function(frm) {
+    //     frm.set_value('status', 'Cancelled');
+    //     frm.save_or_update();
+    // },
 });
 
-function calculate_duration(frm) {
-    if (frm.doc.start_date && frm.doc.end_date) {
-        // Convert the dates to moment objects for calculation
-        let start_date = moment(frm.doc.start_date);
-        let end_date = moment(frm.doc.end_date);
 
-        // Check if start_date and end_date are in the same month and year
-        if (start_date.year() === end_date.year() && start_date.month() === end_date.month()) {
-            // Calculate the duration in days
-            let days = end_date.diff(start_date, 'days');
-            // Set the duration value in the format "{days} Days"
-            let duration_of_the_project = `${days} Days`;
-            frm.set_value('duration_of_the_project', duration_of_the_project);
-        } else {
-            // Calculate the total duration in months
-            let total_months = end_date.diff(start_date, 'months');
 
-            // Calculate the number of years and remaining months
-            let years = Math.floor(total_months / 12);
-            let months = total_months % 12;
 
-            // Set the duration value in the format "{no_ofYear} Year(s) {no_of_months} Month(s)"
-            let duration_of_the_project = `${years} Years ${months} Months`;
-            frm.set_value('duration_of_the_project', duration_of_the_project);
-        }
-    }
-}

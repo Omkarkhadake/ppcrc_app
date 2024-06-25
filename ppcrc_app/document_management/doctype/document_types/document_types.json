@@ -22,12 +22,13 @@
    "fieldname": "document_sub_category",
    "fieldtype": "Link",
    "label": "Document Sub-Category",
-   "options": "Document Sub-Categories"
+   "options": "Document Sub-Categories",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-24 16:43:37.699076",
+ "modified": "2024-06-25 17:57:57.629638",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "Document Types",

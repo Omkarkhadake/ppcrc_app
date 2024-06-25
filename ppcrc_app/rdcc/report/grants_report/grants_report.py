@@ -24,7 +24,6 @@ def execute(filters=None):
     for d in cs_data:
         row = frappe._dict({
             'grant': d.grant,
-            'date': d.date,
             'instructor': d.instructor,
             'academic_year': d.academic_year,
             'fiscal_year': d.fiscal_year,
@@ -40,7 +39,9 @@ def execute(filters=None):
             'duration_of_the_project': d.duration_of_the_project,
             'research_type': d.research_type,
             'attachment': d.attachment,
-            'grants_status':d.grants_status
+            'grants_status':d.grants_status,
+            'start_date':d.start_date,
+            'end_date':d.end_date
         })
         data.append(row)
 
@@ -120,15 +121,21 @@ def get_columns():
             'width': '120'
         },
         {
-            "fieldname": "name_of_project",
-            "label": _("Name of Project"),
-            "fieldtype": "Data",
+            "fieldname": "start_date",
+            "label": _("start_date"),
+            "fieldtype": "Date",
             'width': '120'
         },
         {
-            "fieldname": "date",
-            "label": _("Date"),
+            "fieldname": "end_date",
+            "label": _("start_date"),
             "fieldtype": "Date",
+            'width': '120'
+        },
+        {
+            "fieldname": "name_of_project",
+            "label": _("Name of Project"),
+            "fieldtype": "Data",
             'width': '120'
         },
         {
@@ -200,9 +207,9 @@ def get_cs_data(filters, associated_programs):
     data = frappe.get_all(
         doctype='Grants',
         fields=[
-            'grant', 'date', 'instructor', 'academic_year', 'fiscal_year', 'employee_id', 
+            'grant',  'instructor', 'academic_year', 'fiscal_year', 'employee_id', 
             'program', 'name_of_the_principal_investigator', 'department_of_principal_investigator', 'name_of_project', 'date_of_award', 
-            'amount_sanctioned', 'name_of_the_funding_agency', 'research_type', 'status', 'attachment','grants_status'
+            'amount_sanctioned', 'name_of_the_funding_agency', 'research_type', 'status', 'attachment','grants_status','start_date','end_date'
         ],
         filters=conditions
     )

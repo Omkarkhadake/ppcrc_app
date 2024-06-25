@@ -14,7 +14,7 @@
    "fieldname": "categories",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Categories",
+   "label": "Category Name",
    "reqd": 1,
    "unique": 1
   },
@@ -28,7 +28,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-06-20 20:22:14.785472",
+ "modified": "2024-06-25 12:43:44.233771",
  "modified_by": "Administrator",
  "module": "Document Management",
  "name": "Document Categories",

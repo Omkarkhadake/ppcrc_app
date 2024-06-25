@@ -9,13 +9,14 @@
   "profile_tab",
   "section_break_wdor",
   "grant",
-  "date",
   "grants_status",
+  "start_date",
   "instructor",
   "co_principal_inventors",
   "column_break_dfns",
   "academic_year",
   "fiscal_year",
+  "end_date",
   "employee_id",
   "program",
   "grants_approver_hod",
@@ -104,18 +105,10 @@
    "reqd": 1
   },
   {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Date",
-   "reqd": 1
-  },
-  {
    "fieldname": "co_principal_inventors",
    "fieldtype": "Table",
    "label": "Co-Principal Inventor's",
-   "options": "Coauthors",
-   "reqd": 1
+   "options": "Coauthors"
   },
   {
    "fetch_from": "instructor.instructor_name",
@@ -166,14 +159,15 @@
   {
    "fieldname": "duration_of_the_project",
    "fieldtype": "Data",
-   "label": "Duration of the project",
+   "label": "Duration of the project ",
+   "read_only": 1,
    "reqd": 1
   },
   {
    "fieldname": "research_type",
    "fieldtype": "Select",
-   "label": "Research Type",
-   "options": "\nNon-Government\nGovernment\nNone of above",
+   "label": "Type of Funding Agency",
+   "options": "\nCentral Government\nState Government\nOverseas Organization\nPrivate Company\nTrust\nOthers",
    "reqd": 1
   },
   {
@@ -233,12 +227,24 @@
    "label": "Grants Status",
    "options": "\nOngoing\nCompleted",
    "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-21 09:57:31.967738",
+ "modified": "2024-06-25 19:12:17.564336",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Grants",

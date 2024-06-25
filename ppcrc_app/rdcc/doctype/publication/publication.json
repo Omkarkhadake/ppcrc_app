@@ -26,7 +26,6 @@
   "amended_from",
   "column_break_myoj",
   "national_international",
-  "publication_status",
   "affiliation",
   "publisher",
   "is_ugc_care_listed_",
@@ -36,6 +35,7 @@
   "page_numbers",
   "citation",
   "volume",
+  "issue",
   "status",
   "column_break_moea",
   "impact_factor",
@@ -103,13 +103,13 @@
   {
    "fieldname": "iisn_isbn",
    "fieldtype": "Data",
-   "label": "ISSN/ISBN (e.g.,\"xxxx-xxxx\")",
+   "label": "ISSN/ISBN",
    "reqd": 1
   },
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "label": "Title of Paper",
+   "label": "Title",
    "reqd": 1
   },
   {
@@ -121,19 +121,19 @@
   {
    "fieldname": "impact_factor",
    "fieldtype": "Data",
-   "label": "Impact Factor (e.g.,\"xx-xx\")",
+   "label": "Impact Factor",
    "reqd": 1
   },
   {
    "fieldname": "citation",
    "fieldtype": "Data",
-   "label": "Citation (e.g.,\"xx\")",
+   "label": "Citation",
    "reqd": 1
   },
   {
    "fieldname": "page_numbers",
    "fieldtype": "Data",
-   "label": "Page Number(e.g.,\"xx-xx\")",
+   "label": "Page Number",
    "reqd": 1
   },
   {
@@ -155,7 +155,8 @@
    "depends_on": "eval:doc.publication == 'Conference';",
    "fieldname": "name_of_the_conference",
    "fieldtype": "Data",
-   "label": "Name of the conference"
+   "label": "Name of the conference",
+   "mandatory_depends_on": "eval:doc.publication == 'Conference';"
   },
   {
    "fieldname": "financial_year",
@@ -174,7 +175,7 @@
   {
    "fieldname": "place_of_publication",
    "fieldtype": "Data",
-   "label": "Place of Publication",
+   "label": "Place of Publication (City, Country)",
    "reqd": 1
   },
   {
@@ -209,12 +210,13 @@
    "reqd": 1
   },
   {
+   "depends_on": "eval:doc.is_ugc_care_listed_== 'Yes';",
    "description": "(upload image to verify UGC Care List)",
    "documentation_url": "https://www.ilovepdf.com/compress_pdf",
    "fieldname": "proof",
    "fieldtype": "Attach",
    "label": "Proof ",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.is_ugc_care_listed_== 'Yes';"
   },
   {
    "description": " (Attach Entire Document)",
@@ -238,8 +240,7 @@
    "fieldname": "co_authors",
    "fieldtype": "Table",
    "label": "Co-authors",
-   "options": "Coauthors",
-   "reqd": 1
+   "options": "Coauthors"
   },
   {
    "fieldname": "section_break_vnqq",
@@ -266,7 +267,7 @@
   {
    "fieldname": "volume",
    "fieldtype": "Data",
-   "label": "Volume(e.g.,\"xx\")",
+   "label": "Volume",
    "reqd": 1
   },
   {
@@ -288,22 +289,17 @@
    "reqd": 1
   },
   {
-   "fieldname": "publication_status",
-   "fieldtype": "Select",
-   "in_filter": 1,
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
-   "label": "Publication Status",
-   "options": "\nOngoing\nCompleted",
-   "reqd": 1
+   "depends_on": "eval:doc.publication== 'Journal';",
+   "fieldname": "issue",
+   "fieldtype": "Data",
+   "label": "Issue",
+   "mandatory_depends_on": "eval:doc.publication== 'Journal';"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-21 09:47:40.080616",
+ "modified": "2024-06-25 16:02:05.546405",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "Publication",

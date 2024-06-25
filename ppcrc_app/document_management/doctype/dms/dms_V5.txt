@@ -1,0 +1,29 @@
+Nikhil Dada recomanded way to do filtering 
+
+
+
+
+frappe.ui.form.on("DMS", {
+
+	refresh(frm) {
+        frm.set_query('document_sub_categories', function(doc) {
+            return {
+                filters: {
+                    document_category: doc.document_categories
+                }
+            }
+        });
+    
+    },
+
+    document_categories(frm){
+        frm.set_query('document_sub_categories', function(doc) {
+            return {
+                filters: {
+                    document_category: doc.document_categories
+                }
+            }
+        });
+
+    }
+}); 

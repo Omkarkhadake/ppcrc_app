@@ -135,7 +135,7 @@ def get_columns():
         },
         {
             "fieldname": "application_no",
-            "label": _("Application No"),
+            "label": _("Application / Diary No."),
             "fieldtype": "Data",
             'width': '120'
         },

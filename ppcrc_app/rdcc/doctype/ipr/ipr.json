@@ -97,8 +97,7 @@
    "fieldname": "co_inventors",
    "fieldtype": "Table",
    "label": "Co-Inventor's",
-   "options": "Coauthors",
-   "reqd": 1
+   "options": "Coauthors"
   },
   {
    "fieldname": "registration_no",
@@ -119,7 +118,7 @@
   {
    "fieldname": "application_no",
    "fieldtype": "Data",
-   "label": "Application No.",
+   "label": "Application / Diary No.",
    "reqd": 1
   },
   {
@@ -212,7 +211,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-06-24 15:22:18.837384",
+ "modified": "2024-06-25 16:15:01.712500",
  "modified_by": "Administrator",
  "module": "RDCC",
  "name": "IPR",
